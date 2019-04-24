@@ -1,0 +1,16 @@
+{
+  "development": {
+    "username": "laundry_admin",
+    "password": "production",
+    "database": "laundry_development",
+    "host": "127.0.0.1",
+    "dialect": "postgresql"
+  },
+  "production": {
+    "username": "laundry_admin",
+    "password": "production",
+    "database": "laundry_production",
+    "host": "127.0.0.1",
+    "dialect": "postgresql"
+  }
+}

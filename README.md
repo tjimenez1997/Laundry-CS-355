@@ -212,7 +212,7 @@ Use this code the first time you run the project:
 
 After you run the project the first time, you can start the server using(once you are in the directory):
 
-1. npm server
+1. npm start
 
 ```
 

@@ -171,11 +171,13 @@ GUI on Windows Subsystem:
 
 1. https://sourceforge.net/projects/xming/files/latest/download (Install and run the following)
 
-2. On linux subsystem: export DISPLAY=:0
+2. export DISPLAY=:0
 
-3. subl ./ (can edit files)
+3. DISPLAY=:0 /opt/sublime_text/sublime_text
 
-Instructions also located on guide: https://www.maketecheasier.com/install-linux-subsystem-for-windows10/
+You should be able to edit any text/code file using sublime text
+
+Instructions also located on guide: https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/
 ```
 
 **Congrats, if you made it up to here you can finally run the frontend and backend.**

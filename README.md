@@ -122,8 +122,8 @@ Fix (After you run the above command to install Postgres):
 
 Operating System: Linux/Windows
 ```
-1. createuser -P -s -e UBUNTU_USERNAME (Replace UBUNTU_USERNAME with username you choose when you installed ubuntu or Linux Subsystem for Windows 10)
-2. exit
+1. sudo su - postgres
+2. createuser -P -s -e UBUNTU_USERNAME (Replace UBUNTU_USERNAME with username you choose when you installed ubuntu or Linux Subsystem for Windows 10)
 ```
 
 Operating System: All
@@ -131,6 +131,8 @@ Operating System: All
 1. createuser -P -s -e laundry_admin
 
 2. Use password: production
+
+3. exit
 ```
 
 ### Step 5: Configure Database 

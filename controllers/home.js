@@ -5,9 +5,12 @@ const router = express.Router();
 
 
 router.get('/', (req, res) => {
-  res.json({
-    msg: "Successful GET to '/' route"
-  });
+  res.render('index');
+});
+
+
+router.get('/register', (req, res) => {
+  res.render('register');
 });
 
 router.post('/', (req, res) => {

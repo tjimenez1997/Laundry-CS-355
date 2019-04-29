@@ -1,7 +1,7 @@
 {
-  "name": "Laundry-Backend",
-  "version": "1.0.0",
-  "description": "Starter code for an Express/Sequelize backend.",
+  "name": "Laundry-Project",
+  "version": "1.0.1",
+  "description": "Starter code for a Handlebars Frontend + Express/Sequelize backend",
   "main": "app.js",
   "scripts": {
     "start": "nodemon -L app.js",

@@ -1,8 +1,8 @@
 # Full Stack (Frontend/Backend) Base Code
 
-Front End: React (Located in Client)
+Front End: Handlebars+Bootstrap (Located in Views)
 
-Back End: Express/Sequelize/Postgresql (Located in server)
+Back End: Express/Sequelize/Postgresql
 
 ## Prerequisites 
 
@@ -186,51 +186,35 @@ Instructions also located on guide: https://www.howtogeek.com/261575/how-to-run-
 
 ## Running the Project
 
-Open 2 Terminal Windows
-
-Terminal Window 1:
 ```
 Use this code the first time you run the project:
 
-1. cd client
+1. cd Laundry-CS-355
 
 2. npm install
 
 3. npm start
 
-After you run the project the first time, you can start the client using (once you are in the directory):
+After you run the project the first time, you can start the project using (once you are in the directory):
 
 1. npm start
-```
-
-Terminal Window 2:
-
-```
-Use this code the first time you run the project:
-
-1. cd server
-
-2. npm install
-
-3. npm start
-
-After you run the project the first time, you can start the server using(once you are in the directory):
-
-1. npm start
-
 ```
 
 **You should have both the frontend and backend running.**
 
-Once you have react and express running on two different terminals go to:
+Once you have express running go to:
 
-http://127.0.0.1:3000/ (React Front End)
-
-http://127.0.0.1:8000/ (Express Backend Sample Get Query)
+http://127.0.0.1:8000/ 
 
 From here depending on if you are in charge of the Frontend or Backend learn more about each respective technology...
 
-Frontend (React): https://reactjs.org/tutorial/tutorial.html
+Frontend (Bootstrap): https://getbootstrap.com/docs/4.3/getting-started/introduction/
+Frontend (Handlebars): https://handlebarsjs.com/
+
+High level overview:
+1. Each page is formed like a regular html page. However the ending of the file is .handlebars instead of .html. They are stored in the 'views' folder.
+2. Bootstrap is a library that lets you create nice looking responsive websites. It is added in by adding special scripts to a regular html/handblebars page. See the bootstrap link to see how to use bootstrap classes. It is powerful because it saves you from doing a lot of css.
+3. Handlebars is a templating engine that dynamically serves stuff to html pages without having to manually manipulate the DOM. It can also help simplify your front end code by making it more modular. 
 
 Backend (Sequelize.js using Postgresql): http://docs.sequelizejs.com/
 

@@ -10,23 +10,14 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
 // Set Static Folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-const exphbs = require('express-handlebars');
-app.engine('handlebars', exphbs({
-  layoutsDir: './views/layouts',
-  defaultView: 'index',
-}));
-
 // View Engine
+const exphbs = require('express-handlebars');
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', exphbs({defaultLayout:'main'}));
 app.set('view engine', 'handlebars');
-
-
-
 
 // Load up all of the controllers
 const controllers = require('./controllers');
@@ -40,4 +31,4 @@ models.sequelize.sync({force: false})
     app.listen(PORT, () => {
       console.log(`Server is up and running on port: ${PORT}`)
     });
-  });
+});

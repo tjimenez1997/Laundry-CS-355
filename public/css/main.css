@@ -1,1 +1,88 @@
-/*main.css*/
+/*
+theme colors
+
+blue: #4a7fe3;
+white: #ffffff;
+black: #343C48;
+
+*/
+
+.theme-link, .theme-link:hover{
+	color: #4a7fe3;
+}
+/*-------------- navbar -----------------*/
+#home-navbar{
+	padding: 8px 8vw;
+}
+#home-navbar .navbar-brand{
+	font-weight: bold;
+	font-size: 2rem;
+	color: #ffffff;
+}
+.nav-link{
+	color: #4a7fe3;
+}
+#home-navbar .active{
+	border-bottom: 2px solid #4a7fe3;
+}
+#home-navbar .nav-item{
+	text-align: center;
+    min-width: 90px;
+    margin: 0 10px;
+}
+#home-navbar .navbar-toggler-icon{
+	color: #4a7fe3;	
+}
+/*-------------- sign in and sign up page -----------------*/
+.sign-in-page{
+	height: 100vh;
+	min-height: 600px;
+}
+.sign-in-page .col-md-6{
+	padding: 0;
+}
+.sign-in-page .container-fluid, .sign-in-page .row,
+.sign-in-page .intro-container, .sign-in-page .form-container{
+	height: 100%;
+}
+.intro-container{
+	background-color: #4a7fe3;
+    padding: 75px 8vw 40px 8vw;
+}
+.intro-container h1{
+	color: #ffffff;
+}
+#sign-in-form{
+	width: 100%;
+    padding: 75px 8vw 40px 8vw;
+}
+label{
+	color: #343C48;
+}
+.form-control{
+	color: #343C48;
+    border: 2px solid #ced4da;
+}
+.form-control:focus {
+    color: #343C48;
+    border: 2px solid #4a7fe3;
+    box-shadow: none;
+}
+.submit-btn{
+	display: block;
+	color: #ffffff;
+    width: 50%;
+    margin-top: 1rem;
+    border: 2px solid #4a7fe3;
+    box-shadow: inset 0 0 0 0 #ffffff;
+	-webkit-transition: ease-out 0.4s;
+	background-color: #4a7fe3;
+	-moz-transition: ease-out 0.4s;
+	transition: ease-out 0.4s;
+}
+.submit-btn:hover{
+	color: #4a7fe3;
+	border: 2px solid #4a7fe3;;
+	background-color: #ffffff;
+	box-shadow: inset 400px 0 0 0 #ffffff;
+}

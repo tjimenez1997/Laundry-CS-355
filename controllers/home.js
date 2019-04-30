@@ -5,14 +5,13 @@ const router = express.Router();
 
 
 router.get('/', (req, res) => {
-  res.render('index');
+  res.render('home');
 });
 
 
 router.get('/home', (req, res) => {
   res.render('home');
 });
-
 router.post('/', (req, res) => {
   res.json({
     msg: "Successful POST to '/' route"

@@ -3,8 +3,7 @@ const router = express.Router();
 
 
 router.use('/alt', require('./alt'));
-router.get('/', function(req, res){
-	res.render('home');
-});
+router.use('/', require('./home'));
+router.use('/sign-up', require('./sign-up'));
 
 module.exports = router;

@@ -24,40 +24,40 @@
 			</div>
 			<div class="col-md-6 col-sm-12 col-12">
 				<div class="form-container d-flex justify-content-center align-items-center">
-					<form id="sign-in-form">
+					<form id="sign-in-form" action="/sign-up" method="post">
 						<div class="row">
 							<div class="col-sm-6 col-12">
 							  	<div class="form-group">
 								    <label for="firstName">First Name</label>
-								    <input type="text" class="form-control" id="firstName">
+								    <input type="text" class="form-control" name="firstName" id="firstName">
 							  	</div>
 							</div>
 							<div class="col-sm-6 col-12">
 							    <div class="form-group">
 							    	<label for="lastName">Last Name</label>
-							    	<input type="text" class="form-control" id="lastName">
+							    	<input type="text" class="form-control" name="lastName" id="lastName">
 							    </div>
 							</div>
 						</div>
 					    <div class="form-group">
 						    <label for="emailAddress">Email</label>
-						    <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp">
+						    <input type="email" class="form-control" name="emailAddress" id="emailAddress" aria-describedby="emailHelp">
 					    </div>
 					    <div class="form-group">
 						    <label for="phoneNumber">Phone</label>
-						    <input type="text" class="form-control" id="phoneNumber">
+						    <input type="text" class="form-control"  name="phoneNumber" id="phoneNumber">
 					    </div>
 					    <div class="form-group">
 						    <label for="address">Address</label>
-						    <input type="text" class="form-control" id="address">
-					    </div>
-					    <div class="form-group">
-						    <label for="confirmPassword">Confirm Password</label>
-						    <input type="password" class="form-control" id="confirmPassword">
+						    <input type="text" class="form-control" name="address" id="address">
 					    </div>
 					    <div class="form-group">
 						    <label for="password">Password</label>
-						    <input type="password" class="form-control" id="password">
+						    <input type="password" class="form-control" name="password" id="password">
+					    </div>
+					    <div class="form-group">
+						    <label for="confirmPassword">Confirm Password</label>
+						    <input type="password" class="form-control" name="confirmPassword" id="confirmPassword">
 					    </div>
 						<button type="submit" class="btn submit-btn">Sign In</button>
 					</form>

@@ -1,0 +1,157 @@
+<nav class="navbar navbar-expand-lg fixed-top" id="home-navbar">
+  <a> Logo </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+  </button> 
+  <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav ml-auto">
+       <li class="nav-item">
+         <a class="nav-link" href="/Schedule a Pick Up">Schedule a Pick Up</a>
+       </li>
+      <li class="nav-item">
+         <a class="nav-link" href="/Order Histroy">Order History</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="/Account">Account</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="/Sign-Out">Sign Out</a>
+      </li>
+     </ul>
+    </div>
+</nav>
+   <div class="form-heading">
+        <br> <h2>Schedule a Pick Up </h2> </br>
+   </div>      
+<form>
+   <div class="col-sm-6 col-12">
+   <div class="form-group">
+   <label for ="Address">Address</label>
+   <input type ="text" class="form-control">
+   </div>
+   </div>
+   <br><h1>Pick Up</h1> </br>
+    <div class ="row">
+         <div class ="col">
+          <label for ="Date">Date</label>
+          <input type ="text" class="form-control">
+         </div> 
+        <div class ="col">
+          <label for ="Time">Time</label>
+          <input type ="text" class="form-control">
+        </div> 
+      </div>
+   <br><h1>Drop Off</h1></br>
+   <div class ="row">
+         <div class ="col">
+          <label for ="Date">Date</label>
+          <input type ="text" class="form-control">
+         </div> 
+        <div class ="col">
+          <label for ="Time">Time</label>
+          <input type ="text" class="form-control">
+        </div> 
+      </div>
+      <br> <button class="btn btn-primary" type="submit">Next</button> </br>
+
+       <h>back button</h>
+    <br><h1>Wash & Dry</h1></br>
+   <div class ="row">
+         <div class ="col">
+          <label for ="load-size">Load Size</label><br>
+          <label for ="large">large (20-25 pounds)</label><br>
+          <label for ="medium">Medium (12-19 pounds)</label> <br>
+          <label for ="small">Small(under 12 pounds)</label> <br>
+         </div>
+         <div class ="col">
+          <label for ="number">Number</label>
+          <select id="number" class="form-control">
+          <option selected>0</option>
+          <option>1</option>
+          <option>2</option>
+          </select>
+          <select id="med-number" class="form-control">
+          <option selected>0</option>
+          <option>1</option>
+          <option>2</option>
+          </select>
+          <select id="med-number" class="form-control">
+          <option selected>0</option>
+          <option>1</option>
+          <option>2</option>
+          </select>
+        </div> 
+        <div class ="col">
+          <label for ="price">Price</label> <br>
+          <label for ="large-price">$ 14</label><br>
+          <label for ="medium-price">$ 6</label><br>
+          <label for ="small-price">$ 4</label> <br>
+        </div> 
+   </div>     
+   <br><h1>Dry Clean</h1></br>
+   <div class ="row">
+         <div class ="col">
+            <label for ="type-of-clothing">Type of Clothing</label> <br>
+            </select>
+            <select id="cloths" class="form-control">
+            <option selected>0</option>
+            <option>1</option>
+            <option>2</option>
+            </select>
+         </div>
+         <div class ="col">
+            <label for ="nuber">nuber</label> <br>
+           </select>
+           <select id="med-number" class="form-control">
+           <option selected>0</option>
+           <option>1</option>
+           <option>2</option>
+           </select>
+         </div>
+         <div class ="col">
+            <label for ="price">Price</label> <br>
+         </div>
+   </div>
+   <br> <button class="btn btn-primary" type="submit">Next</button> </br>
+     <h>back button</h>
+    <br><h1>Select a Nearby Tasker</h1></br>
+    <ul class="list-group">
+       <li>empty right now</li>
+       <li>empty right now</li>
+    </ul>
+
+    <br> <button class="btn btn-primary" type="submit">once are done press select buttion to continue</button> </br>
+     <h>back button</h>
+</form>
+<section class = "Summary-page">
+   <br><h1>Order Summary</h1></br>
+   <div class ="wash-dry">
+   <br><h1>Wash & Dry</h1></br>
+    <div class ="row">
+         <div class ="col">
+          <label for ="load-size">Load Size</label><br>
+         </div>
+         <div class ="col">
+          <label for ="number">Number</label>
+         </div> 
+         <div class ="col">
+          <label for ="price">Price</label>
+         </div> 
+    </div>
+   </div> 
+   <div class ="dry-clean">
+   <br><h1>Dry Clean</h1></br>
+    <div class ="row">
+         <div class ="col">
+          <label for ="type-of-clothing">Type of Clothing</label>
+         </div>
+         <div class ="col">
+          <label for ="number">Number</label>
+         </div> 
+         <div class ="col">
+          <label for ="price">Price</label>
+         </div> 
+    </div>
+   </div>
+
+</section>

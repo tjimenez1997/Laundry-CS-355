@@ -4,7 +4,7 @@ theme colors
 blue: #4a7fe3;
 white: #ffffff;
 black: #343C48;
-
+grey: #ced4da;
 */
 
 .theme-link, .theme-link:hover{
@@ -12,12 +12,25 @@ black: #343C48;
 }
 /*-------------- navbar -----------------*/
 #home-navbar{
-	padding: 8px 8vw;
+	padding: 0 8vw;
+	background-color: #ffffff;
+	-webkit-box-shadow: 0px 5px 10px 0px rgba(189,189,189,0.3);
+	-moz-box-shadow: 0px 5px 10px 0px rgba(189,189,189,0.3);
+	box-shadow: 0px 5px 10px 0px rgba(189,189,189,0.3);	
 }
 #home-navbar .navbar-brand{
 	font-weight: bold;
 	font-size: 2rem;
-	color: #ffffff;
+	color: #4a7fe3;
+}
+#navbarNav{
+	height: 58px;
+}
+#navbarNav ul, #navbarNav li{
+	height: 100%;
+} 
+#navbarNav a{
+	padding-top: 1rem;
 }
 .nav-link{
 	color: #4a7fe3;
@@ -33,6 +46,9 @@ black: #343C48;
 #home-navbar .navbar-toggler-icon{
 	color: #4a7fe3;	
 }
+.navbar-toggler:focus{
+	outline: none;
+}
 /*-------------- sign in and sign up page -----------------*/
 .sign-in-page{
 	height: 100vh;
@@ -42,8 +58,15 @@ black: #343C48;
 	padding: 0;
 }
 .sign-in-page .container-fluid, .sign-in-page .row,
-.sign-in-page .intro-container, .sign-in-page .form-container{
+.sign-in-page .form-container{
 	height: 100%;
+}
+.sign-in-page .intro-container{
+	position: fixed;
+    height: 100vh;
+    width: 50vw;
+    left: 0;
+    top: 0;
 }
 .intro-container{
 	background-color: #4a7fe3;
@@ -52,27 +75,68 @@ black: #343C48;
 .intro-container h1{
 	color: #ffffff;
 }
-#sign-in-form{
+.registration-form{
 	width: 100%;
-    padding: 75px 8vw 40px 8vw;
+    padding-top: 25px;
+}
+.sign-in-container{
+	padding: 0 8vw;
+	height: 100%;
+}
+.sign-up-container{
+	padding: 120px 8vw 40px 8vw;
+}
+.nav-tabs {
+    border-bottom: 2px solid #ced4da;
+}
+.nav-tabs .nav-link.active{
+	color: #4a7fe3;
+	border-color: transparent;
+	border-bottom: 2px solid #4a7fe3;
+}
+.nav-tabs .nav-link{
+	color: #b9bec3;
+	width: 50%;
+	border: none;
+	text-align: center;
+}
+.nav-tabs .nav-item {
+    margin-bottom: -2px;
 }
 label{
 	color: #343C48;
 }
-.form-control{
+.availability label{
+	font-size: 12px;
+}
+.availability .custom-select{
+
+}
+.availability .custom-select, .form-control{
 	color: #343C48;
     border: 2px solid #ced4da;
 }
-.form-control:focus {
+.availability .custom-select:focus, .form-control:focus {
     color: #343C48;
     border: 2px solid #4a7fe3;
     box-shadow: none;
+}
+#add-more-btn{
+	color: #4a7fe3;
+	font-size: 12px;
+	cursor: pointer;
+    display: block;
+    margin-top: -8px;
+    margin-bottom: 1rem;		
+}
+#add-more-btn:hover{
+	text-decoration: underline;
 }
 .submit-btn{
 	display: block;
 	color: #ffffff;
     width: 50%;
-    margin-top: 1rem;
+    margin-top: 2rem;
     border: 2px solid #4a7fe3;
     box-shadow: inset 0 0 0 0 #ffffff;
 	-webkit-transition: ease-out 0.4s;

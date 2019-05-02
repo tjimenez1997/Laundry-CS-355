@@ -1,1 +1,22 @@
-/*responsive.css*/
+@media only screen and (max-width: 991px) {
+	#home-navbar .navbar-toggler-icon {
+	    color: #4a7fe3;
+	}
+	#home-navbar .nav-item {
+	    text-align: left;
+	    margin: 0;
+	}
+	.intro-container h1{
+		color: #ffffff;
+	}
+}
+@media only screen and (max-width: 767px) {
+
+	.sign-in-page .intro-container, .sign-in-page .form-container {
+	    height: 100vh;
+	}
+	.sign-in-page .intro-container {
+	    position: relative;
+	    width: 100vw;
+	}
+}

@@ -105,7 +105,7 @@
 										<div class="col-sm-4 col-12">
 											<div class="form-group">
 												<label for="dayOfWeek">Day of Week</label>
-												<select class="custom-select custom-select-sm" id="dayOfWeek">
+												<select class="custom-select custom-select-sm" id="dayOfWeek" name="dayOfWeek">
 													<option selected value="monday">Monday</option>
 													<option value="tuesday">Tuesday</option>
 													<option value="wednesday">Wednesday</option>
@@ -115,11 +115,12 @@
 												    <option value="sunday">Sunday</option>
 												</select>
 											</div>
+											<div id="additional-day"></div>
 										</div>
 										<div class="col-sm-4 col-12">
 											<div class="form-group">
 												<label for="startTime">Start Time</label>
-												<select class="custom-select custom-select-sm" id="startTime">
+												<select class="custom-select custom-select-sm" id="startTime" name="startTime">
 								                    <option value="7:00">7:00 AM</option>    
 								                    <option value="7:30">7:30 AM</option>    
 								                    <option value="8:00">8:00 AM</option>    
@@ -152,11 +153,12 @@
 								                    <option value="22:00">10:00 PM</option>
 												</select>
 											</div>
+											<div id="additional-start-time"></div>
 										</div>
 										<div class="col-sm-4 col-12">
 											<div class="form-group">
 												<label for="endTime">End Time</label>
-												<select class="custom-select custom-select-sm" id="endTime">
+												<select class="custom-select custom-select-sm" id="endTime" name="endTime">
 								                    <option value="7:00">7:00 AM</option>    
 								                    <option value="7:30">7:30 AM</option>    
 								                    <option value="8:00">8:00 AM</option>    
@@ -189,8 +191,9 @@
 								                    <option value="22:00">10:00 PM</option>
 												</select>
 											</div>
+											<div id="additional-end-time"></div>
 										</div>
-										<div id="additional-timeslots"></div>
+										<div id="additional-timeslots" class="row"></div>
 										<div class="col-sm-12 col-12">
 											<a id="add-more-btn">+ Add more</a>
 										</div>
@@ -206,25 +209,8 @@
 									<button type="submit" class="btn submit-btn">Sign Up</button>
 								</form>
   							</div>
-
-
-
-
-
 						</div>
-
-
 					</div>
-
-
-
-
-
-
-
-
-
-
 
 				</div>
 			</div>

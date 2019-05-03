@@ -23,7 +23,7 @@
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-12 col-12">
-				<div class="form-container">
+				<div class="form-container" id="signInContainer">
 					<div class="sign-in-container d-flex justify-content-center align-items-center">
 						<form id="sign-in-form" class="registration-form">
 						  <div class="form-group">
@@ -34,11 +34,31 @@
 						    <label for="password">Password</label>
 						    <input type="password" class="form-control" id="password" name="password">
 						  </div>
-						  <a href="#" class="theme-link">Forgot your password?</a>
+						  <a class="theme-link" id="showResetForm">Forgot your password?</a>
 						  <button type="submit" class="btn submit-btn">Sign In</button>
 						</form>
 					</div>
 				</div>
+				<div class="form-container" id="resetPasswordContainer">
+					<div class="sign-in-container d-flex justify-content-center align-items-center">
+						<div class="reset-content">
+							<a class="back-btn" id="showSignIn"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></a>
+							<h2 class="h3">Forgot Your Password?</h2>
+							<p>Please enter your email address below. We'll send you an email to with a link to reset your password.</p>
+							<form id="reset-form" class="registration-form">
+							  <div class="form-group">
+							    <label for="resetEmailAddress">Email</label>
+							    <input type="email" class="form-control" id="resetEmailAddress" aria-describedby="emailHelp" name="emailAddress">
+							  </div>
+							  <button type="submit" class="btn submit-btn">Send</button>
+							</form>
+						</div>
+					</div>
+				</div>
+
+
+
+
 			</div>
 		</div>
 	</div>	

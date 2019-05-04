@@ -1,0 +1,28 @@
+<section class="debug">
+<h1>Debug</h1>
+<p>This page exists to test backend functions</p>
+<p>It is also the first example of a authenticated view page.</p>
+<p>If you try to access this page without signing in, it will state "Unauthorized"</p>
+<p>Checkout debug.js under controllers to see how a authenticated route (url behind account password) works</p>
+
+<p>Also check out this handlebars page to see how the token information is accessed. The JWT token is sent raw and is being decoded client side to a object. The conversion occurs in jwt-decode.min.js. This data is already accessible to user, so no worried about safety. Below is all of the possible IDS for user information you can access simply by using the id names below in any html tag.</p>
+
+<h3>Your account token information:</h3>
+<div>First Name: <span id="FIRST_NAME"></p></div>
+<div>Last Name: <span id="LAST_NAME"></p></div>
+<div>Email: <span id="EMAIL_ADDRESS"></p></div>
+<div>Address: <span id="ADDRESS"></p></div>
+<div>Phone Number: <span id="PHONE_NUMBER"></p></div>
+
+<p>In addition, I finally coded the signout route as well!</p>
+<a class="btn btn-primary" href="//127.0.0.1:8000/signout" role="button">Sign Out</a>
+
+<h3>To do (Regarding authentication):</h3>
+<ul>
+	<li>Make sign in go to schedule page after the front end is properly coded</li>
+	<li>Make sign out not lead to 'unauthorized' but instead to the homepage</li>
+	<li>Make homepage lead to signed in page when user hasnt logged out yet</li>
+	<li>Make proper wrong password+ 404 error + successfully made account+ unauthorized redirect routes/pages</li>
+</ul>
+
+</section>

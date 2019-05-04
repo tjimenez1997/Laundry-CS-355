@@ -4,7 +4,7 @@ const models = require('../models');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.render('schedule-a-Pick-Up');
+    res.render('schedule');
 });
   
   

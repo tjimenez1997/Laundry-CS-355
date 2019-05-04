@@ -6,7 +6,10 @@ const router = express.Router();
 
 router.use('/', require('./home'));
 router.use('/sign-up', require('./sign-up'));
-router.use('/schedule-a-Pick-Up',require('./schedule-a-Pick-Up'));
+router.use('/schedule',require('./schedule'));
+router.use('/account',require('./account'));
+router.use('/debug', require('./debug'));
+
 
 
 module.exports = router;

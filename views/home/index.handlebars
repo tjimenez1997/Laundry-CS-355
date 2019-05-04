@@ -30,14 +30,14 @@
 					<div class="sign-in-container d-flex justify-content-center align-items-center">
 						<div class="signin-content">
 							<h2 class="h3 form-title">Sign In</h2>
-							<form id="sign-in-form" class="registration-form">
+							<form id="sign-in-form" class="registration-form" action="/" method="post">
 							  <div class="form-group">
-							    <label for="emailAddress">Email</label>
-							    <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp" name="emailAddress">
+							    <label for="emailAddress">Email</label> 
+							    <input type="email" class="form-control" name="emailAddress" id="emailAddress" aria-describedby="emailHelp" name="emailAddress">
 							  </div>
 							  <div class="form-group">
 							    <label for="password">Password</label>
-							    <input type="password" class="form-control" id="password" name="password">
+							    <input type="password" class="form-control" name="userPassword" id="password" name="password">
 							  </div>
 							  <a class="theme-link" id="showResetForm">Forgot your password?</a>
 							  <button type="submit" class="btn submit-btn">Sign In</button>

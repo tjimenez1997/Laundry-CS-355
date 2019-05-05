@@ -13,12 +13,36 @@ body{
 	font-size: 16px;
 	overflow-x: hidden;
 }
+h1, h2{
+	color: #4a7fe3;
+}
+a{
+	color: #4a7fe3;
+	cursor: pointer !important;
+}
 .theme-link{
 	cursor: pointer;
 	color: #4a7fe3 !important;
 }
 .theme-link:hover{
 	text-decoration: underline !important;
+}
+.modal-btn{
+	cursor: pointer;
+	border: 2px solid #4a7fe3;
+	color: #4a7fe3 !important;
+
+    box-shadow: inset 0 0 0 0 #4a7fe3;
+	-webkit-transition: ease-out 0.3s;
+	background-color: #ffffff;
+	-moz-transition: ease-out 0.3s;
+	transition: ease-out 0.3s;	
+}
+.modal-btn:hover{
+	color: #ffffff;
+	border: 2px solid #4a7fe3;;
+	color: #ffffff !important;
+	box-shadow: inset 0 0 0 25px #4a7fe3;	
 }
 /*-------------- navbar -----------------*/
 #home-navbar{
@@ -108,6 +132,7 @@ body{
 .form-title{
 	display: none;
 	margin-bottom: 40px;
+	color: #4a7fe3;
 }
 .signin-content{
 	width: 100%;
@@ -156,11 +181,12 @@ label{
 .availability .custom-select{
 
 }
-.availability .custom-select, .form-control{
+.availability .custom-select, .form-control, .custom-select{
 	color: #343C48;
     border: 2px solid #ced4da;
 }
-.availability .custom-select:focus, .form-control:focus {
+.availability .custom-select:focus, 
+.form-control:focus{
     color: #343C48;
     border: 2px solid #4a7fe3;
     box-shadow: none;
@@ -210,7 +236,52 @@ label{
 .was-validated .custom-select:valid,
 .was-validated .custom-select:valid:focus,
 .was-validated .form-control:valid, 
-.was-validated .form-control:valid:focus{
+.was-validated .form-control:valid:focus,
+.custom-select:focus{
     border-color: #ced4da;
     box-shadow: none;
+}
+
+/*-------------- all tasks -----------------*/
+#all-tasks-section{
+	padding-top: 120px;
+}
+#all-tasks-section span{
+	display: block;
+}
+.h3.content-title{
+	color: #4a7fe3;
+}
+.task-date{
+	font-size: 1.5rem;
+	color: #343C48;
+    margin-bottom: 10px;
+}
+.content-title{
+	margin-top: 50px;
+	padding-bottom: 8px;
+    margin-bottom: 15px;
+	border-bottom: 2px solid #4a7fe3;
+}
+.col-title{
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+#all-tasks-section .modal-btn{
+	margin-top: 34px;
+    display: inline-block;
+    text-align: center;
+    padding: 5px 15px;
+    border-radius: .25rem;
+}
+#all-tasks-section .row{
+	border-radius: 6px;
+	margin: 0 0 30px 0;
+    -webkit-box-shadow: 0px 1px 5px 0px rgb(226, 226, 226);
+    -moz-box-shadow: 0px 1px 5px 0px rgb(226, 226, 226);
+    box-shadow: 0px 1px 5px 0px rgb(226, 226, 226);
+    padding: 15px 0 0 0;
+}
+#all-tasks-section .modal-btn{
+	font-size: 12px;
 }

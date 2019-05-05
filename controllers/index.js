@@ -7,7 +7,9 @@ const router = express.Router();
 router.use('/', require('./home'));
 router.use('/sign-up', require('./sign-up'));
 router.use('/schedule',require('./schedule'));
+router.use('/all-tasks',require('./all-tasks'));
 router.use('/account',require('./account'));
+
 router.use('/debug', require('./debug'));
 
 

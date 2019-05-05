@@ -36,71 +36,107 @@
 						</div>
 						<div class="tab-content" id="nav-tabContent">
 							<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-								<form id="customer-signup-form" class="registration-form" action="/sign-up" method="post">
+								<form id="customer-signup-form" class="registration-form form-validation" action="/sign-up" method="post" novalidate oninput='confirmPassword.setCustomValidity(confirmPassword.value != password.value ? "Passwords do not match." : "")'>
 									<div class="row">
 										<div class="col-sm-6 col-12">
 										  	<div class="form-group">
 											    <label for="customerFirstName">First Name</label>
-											    <input type="text" class="form-control" name="firstName" id="customerFirstName">
+											    <input type="text" class="form-control" name="firstName" id="customerFirstName" required>
+											    <div class="invalid-feedback">
+											    	Please enter your first name.
+											    </div>
 										  	</div>
 										</div>
 										<div class="col-sm-6 col-12">
 										    <div class="form-group">
 										    	<label for="customerLastName">Last Name</label>
-										    	<input type="text" class="form-control" name="lastName" id="customerLastName">
+										    	<input type="text" class="form-control" name="lastName" id="customerLastName" required>
+										    	<div class="invalid-feedback">
+											    	Please enter your last name.
+											    </div>
 										    </div>
 										</div>
 									</div>
 								    <div class="form-group">
 									    <label for="customerEmailAddress">Email</label>
-									    <input type="email" class="form-control" name="emailAddress" id="customerEmailAddress" aria-describedby="emailHelp">
+									    <input type="email" class="form-control" name="emailAddress" id="customerEmailAddress" aria-describedby="emailHelp" required>
+										<div class="invalid-feedback">
+											Please enter a valid email address.
+										</div>
 								    </div>
 								    <div class="form-group">
 									    <label for="customerPhoneNumber">Phone</label>
-									    <input type="text" class="form-control"  name="phoneNumber" id="customerPhoneNumber">
+									    <input type="text" class="form-control"  name="phoneNumber" id="customerPhoneNumber" required>
+									    <div class="invalid-feedback">
+											Please enter your phone number.
+										</div>
 								    </div>
 								    <div class="form-group">
 									    <label for="customerAddress">Address</label>
-									    <input type="text" class="form-control" name="address" id="customerAddress">
+									    <input type="text" class="form-control" name="address" id="customerAddress" required>
+									    <div class="invalid-feedback">
+											Please enter your phone number.
+										</div>
 								    </div>
 								    <div class="form-group">
 									    <label for="customerPassword">Password</label>
-									    <input type="password" class="form-control" name="password" id="customerPassword">
+									    <input type="password" class="form-control" name="password" id="customerPassword" required>
+									    <div class="invalid-feedback">
+											Please enter a password.
+										</div>
 								    </div>
 								    <div class="form-group">
 									    <label for="confirmCustomerPassword">Confirm Password</label>
-									    <input type="password" class="form-control" name="confirmPassword" id="confirmCustomerPassword">
+									    <input type="password" class="form-control" name="confirmPassword" id="confirmCustomerPassword" required>
+									    <div class="invalid-feedback" id="validate">
+											Please confirm your password.
+										</div>
 								    </div>
 									<button type="submit" class="btn submit-btn">Sign Up</button>
 								</form>
 							</div>
   							<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-								<form id="tasker-signup-form" class="registration-form" action="/sign-up" method="post">
+								<form id="tasker-signup-form" class="registration-form form-validation" action="/sign-up" method="post" novalidate oninput='confirmPassword.setCustomValidity(confirmPassword.value != password.value ? "Passwords do not match." : "")'>
 									<div class="row">
 										<div class="col-sm-6 col-12">
 										  	<div class="form-group">
 											    <label for="taskerFirstName">First Name</label>
-											    <input type="text" class="form-control" name="taskerFirstName" id="taskerFirstName">
+											    <input type="text" class="form-control" name="taskerFirstName" id="taskerFirstName" required>
+											    <div class="invalid-feedback">
+											    	Please enter your first name.
+											    </div>
 										  	</div>
 										</div>
 										<div class="col-sm-6 col-12">
 										    <div class="form-group">
 										    	<label for="taskerLastName">Last Name</label>
-										    	<input type="text" class="form-control" name="taskerLastName" id="taskerLastName">
+										    	<input type="text" class="form-control" name="taskerLastName" id="taskerLastName" required>
+											    <div class="invalid-feedback">
+											    	Please enter your last name.
+											    </div>
 										    </div>
 										</div>
 									</div>
 								    <div class="form-group">
 									    <label for="taskerEmailAddress">Email</label>
-									    <input type="email" class="form-control" name="taskerEmailAddress" id="taskerEmailAddress" aria-describedby="emailHelp">
+									    <input type="email" class="form-control" name="taskerEmailAddress" id="taskerEmailAddress" aria-describedby="emailHelp" required>
+										<div class="invalid-feedback">
+											Please enter a valid email address.
+										</div>
 								    </div>
 								    <div class="form-group">
 									    <label for="taskerPhoneNumber">Phone</label>
-									    <input type="text" class="form-control"  name="taskerPhoneNumber" id="taskerPhoneNumber">
+									    <input type="text" class="form-control"  name="taskerPhoneNumber" id="taskerPhoneNumber" required>
+										<div class="invalid-feedback">
+											Please enter your phone number.
+										</div>
 								    </div>
 								    <div class="form-group">
 									    <label for="taskerAddress">Address</label>
-									    <input type="text" class="form-control" name="taskerAddress" id="taskerAddress">
+									    <input type="text" class="form-control" name="taskerAddress" id="taskerAddress" required>
+										<div class="invalid-feedback">
+											Please enter your address.
+										</div>
 								    </div>
 									<div class="row availability">
 										<div class="col-sm-12 col-12">
@@ -109,8 +145,9 @@
 										<div class="col-sm-4 col-12">
 											<div class="form-group">
 												<label for="dayOfWeek">Day of Week</label>
-												<select class="custom-select custom-select-sm" id="dayOfWeek" name="dayOfWeek">
-													<option selected value="monday">Monday</option>
+												<select class="custom-select custom-select-sm" id="dayOfWeek" name="dayOfWeek" required>
+													<option value=""></option>
+													<option value="monday">Monday</option>
 													<option value="tuesday">Tuesday</option>
 													<option value="wednesday">Wednesday</option>
 												    <option value="thursday">Thursday</option>
@@ -118,13 +155,17 @@
 												    <option value="saturday">Saturday</option>
 												    <option value="sunday">Sunday</option>
 												</select>
+												<div class="invalid-feedback">
+													Please select a day of week.
+												</div>
 											</div>
 											<div id="additional-day"></div>
 										</div>
 										<div class="col-sm-4 col-12">
 											<div class="form-group">
 												<label for="startTime">Start Time</label>
-												<select class="custom-select custom-select-sm" id="startTime" name="startTime">
+												<select class="custom-select custom-select-sm" id="startTime" name="startTime" required>
+													<option value=""></option>
 								                    <option value="7:00">7:00 AM</option>    
 								                    <option value="7:30">7:30 AM</option>    
 								                    <option value="8:00">8:00 AM</option>    
@@ -156,13 +197,17 @@
 								                    <option value="21:30">9:30 PM</option>    
 								                    <option value="22:00">10:00 PM</option>
 												</select>
+												<div class="invalid-feedback">
+													Please select a start time.
+												</div>
 											</div>
 											<div id="additional-start-time"></div>
 										</div>
 										<div class="col-sm-4 col-12">
 											<div class="form-group">
 												<label for="endTime">End Time</label>
-												<select class="custom-select custom-select-sm" id="endTime" name="endTime">
+												<select class="custom-select custom-select-sm" id="endTime" name="endTime" required>
+													<option value=""></option>
 								                    <option value="7:00">7:00 AM</option>    
 								                    <option value="7:30">7:30 AM</option>    
 								                    <option value="8:00">8:00 AM</option>    
@@ -194,6 +239,9 @@
 								                    <option value="21:30">9:30 PM</option>    
 								                    <option value="22:00">10:00 PM</option>
 												</select>
+												<div class="invalid-feedback">
+													Please select an end time.
+												</div>
 											</div>
 											<div id="additional-end-time"></div>
 										</div>
@@ -204,11 +252,17 @@
 									</div>
 								    <div class="form-group">
 									    <label for="password">Password</label>
-									    <input type="password" class="form-control" name="taskerPassword" id="password">
+									    <input type="password" class="form-control" name="taskerPassword" id="password" required>
+										<div class="invalid-feedback">
+											Please enter a password.
+										</div>
 								    </div>
 								    <div class="form-group">
 									    <label for="confirmPassword">Confirm Password</label>
-									    <input type="password" class="form-control" name="confirmPassword" id="confirmPassword">
+									    <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" required>
+										<div class="invalid-feedback">
+											Please confirm your password.
+										</div>
 								    </div>
 									<button type="submit" class="btn submit-btn">Sign Up</button>
 								</form>

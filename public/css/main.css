@@ -5,6 +5,7 @@ blue: #4a7fe3;
 white: #ffffff;
 black: #343C48;
 grey: #ced4da;
+red (error color): #e47983;
 */
 
 body{
@@ -192,4 +193,24 @@ label{
 	border: 2px solid #4a7fe3;;
 	background-color: #ffffff;
 	box-shadow: inset 0 0 0 45px #ffffff;
+}
+.show-error{
+	display: block;
+}
+.input-error, .was-validated .form-control:invalid,
+.was-validated .form-control:invalid:focus,
+.was-validated .custom-select:invalid,
+.was-validated .custom-select:invalid:focus{
+    border-color: #e47983 !important;
+    box-shadow: none;
+}
+.invalid-feedback{
+	color: #e47983;
+}
+.was-validated .custom-select:valid,
+.was-validated .custom-select:valid:focus,
+.was-validated .form-control:valid, 
+.was-validated .form-control:valid:focus{
+    border-color: #ced4da;
+    box-shadow: none;
 }

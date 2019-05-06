@@ -43,5 +43,8 @@ $(document).ready(function() {
 		$('#resetPasswordContainer').hide();
 		$('#signInContainer').show();
 	});
-	
+	// date picker
+	$( function() {
+    $( "#datepicker" ).datepicker();
+	} );
 });

@@ -21,7 +21,7 @@
   <div class="container">
     <h1 class="section-title">All Tasks</h1>
     <h2 class="h3 content-title">Pending (2)</h2>
-    <div class="row">
+    <div class="row entry-row">
       <div class="col-lg-3 col-sm-4 col-4">
         <span class="col-title">Brenda Walker</span>
         <p>770 Michigan Avenue, Gibsonia, PA 15044</p>
@@ -43,7 +43,7 @@
                 <option value="pickedUp">Picked up</option>
                 <option value="cleaning">Cleaning</option>
                   <option value="droppingOff">Dropping off</option>
-                  <option value="complete">Complete</option>
+                  <option value="completed">Completed</option>
               </select>
             </div>
         </form>
@@ -52,7 +52,7 @@
         <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
       </div>
     </div>
-    <div class="row">
+    <div class="row entry-row">
       <div class="col-lg-3 col-sm-4 col-4">
         <span class="col-title">Brenda Walker</span>
         <p>770 Michigan Avenue, Gibsonia, PA 15044</p>
@@ -74,7 +74,7 @@
                 <option value="pickedUp">Picked up</option>
                 <option value="cleaning">Cleaning</option>
                   <option value="droppingOff">Dropping off</option>
-                  <option value="complete">Complete</option>
+                  <option value="completed">Completed</option>
               </select>
             </div>
         </form>
@@ -84,9 +84,9 @@
       </div>
     </div>
 
-    <h2 class="h3 content-title">Completed (1)</h2>
+    <h2 class="h3 content-title">completedd (1)</h2>
     <span class="task-date">4/23/2019</span>
-    <div class="row">
+    <div class="row entry-row">
       <div class="col-lg-3 col-sm-4 col-4">
         <span class="col-title">Brenda Walker</span>
         <p>770 Michigan Avenue, Gibsonia, PA 15044</p>
@@ -108,7 +108,7 @@
                 <option value="pickedUp">Picked up</option>
                 <option value="cleaning">Cleaning</option>
                   <option value="droppingOff">Dropping off</option>
-                  <option value="complete">Complete</option>
+                  <option value="completed">Completed</option>
               </select>
             </div>
         </form>
@@ -118,21 +118,72 @@
       </div>
     </div>
 
-    <div class="modal fade order-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal fade order-modal" tabindex="-1" role="dialog" aria-labelledby="orderDetails" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Order Details</h5>
+            <h4 class="modal-title">Order Details</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true" class="close-btn"></span>
             </button>
           </div>
           <div class="modal-body">
-            <p>Modal body text goes here.</p>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-4 col-sm-6 col-6">
+                  <span class="col-title">Name</span>
+                  <span>Brenda Walker</span>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-6">
+                  <span class="col-title">Phone</span>
+                  <span>231-022-1232</span>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-6">
+                  <span class="col-title">Address</span>
+                  <span>770 Michigan Avenue, Gibsonia, PA 15044</span>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-6">
+                  <span class="col-title">Pick-Up Time</span>
+                  <span>3:00 PM</span>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-6">
+                  <span class="col-title">Drop-Off Time</span>
+                  <span>8:00 PM</span>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-6">
+                  <span class="col-title">Order Status</span>
+                  <form>
+                      <div class="form-group">
+                        <select class="custom-select custom-select-sm" id="orderStatus" name="orderStatus">
+                          <option value="waiting">Waiting for pickup</option>
+                          <option value="pickedUp">Picked up</option>
+                          <option value="cleaning">Cleaning</option>
+                            <option value="droppingOff">Dropping off</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                      </div>
+                  </form>
+                </div>
+              </div>
+              <h5 class="modal-subtitle">Wash &amp; Dry</h5>
+              <div class="row">
+                <div class="col-sm-4 col-4">
+                  <span class="col-title">Load Size</span>
+                  <span>Large</span>
+                </div>
+                <div class="col-sm-4 col-4">
+                  <span class="col-title">Number</span>
+                  <span>2</span>
+                </div>
+                <div class="col-sm-4 col-4">
+                  <span class="col-title">Prices</span>
+                  <span>$14</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </section>

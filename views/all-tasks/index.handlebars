@@ -21,7 +21,6 @@
   <div class="container">
     <h1 class="section-title">All Tasks</h1>
     <h2 class="h3 content-title">Pending (2)</h2>
-
     <div class="row">
       <div class="col-lg-3 col-sm-4 col-4">
         <span class="col-title">Brenda Walker</span>
@@ -50,11 +49,9 @@
         </form>
       </div>
       <div class="col-lg-2 col-sm-6 col-6 text-right">
-        <a class="modal-btn">View Details</a>
+        <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
       </div>
     </div>
-
-
     <div class="row">
       <div class="col-lg-3 col-sm-4 col-4">
         <span class="col-title">Brenda Walker</span>
@@ -83,12 +80,11 @@
         </form>
       </div>
       <div class="col-lg-2 col-sm-6 col-6 text-right">
-        <a class="modal-btn">View Details</a>
+        <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
       </div>
     </div>
 
-
-    <h2 class="h3 content-title">Completed (2)</h2>
+    <h2 class="h3 content-title">Completed (1)</h2>
     <span class="task-date">4/23/2019</span>
     <div class="row">
       <div class="col-lg-3 col-sm-4 col-4">
@@ -118,7 +114,23 @@
         </form>
       </div>
       <div class="col-lg-2 col-sm-6 col-6 text-right">
-        <a class="modal-btn">View Details</a>
+        <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
+      </div>
+    </div>
+
+    <div class="modal fade order-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Order Details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="close-btn"></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+        </div>
       </div>
     </div>
 

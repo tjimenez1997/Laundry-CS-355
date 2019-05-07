@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     Orders.hasMany(models.Customer);
     Orders.hasMany(models.Workers);
     Orders.belongsTo(models.OrderData);
+    Orders.belongsTo(models.Transactions);
   };
   return Orders;
 };

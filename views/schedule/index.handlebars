@@ -23,7 +23,7 @@
 <section class ="schedule-page">
    <div class ="form-container" id ="nextpageContainer">
       <div class="schedule-container d-flex justify-content-center align-items-center">
-         <div class = "container-fluid">
+         <div class = "container-fluid" id="schedulepage">
             <h1 class ="section-title">Schedule a Pick Up </h1>
                <div class="form-group">
                   <label for ="address">Address</label>
@@ -38,7 +38,7 @@
                                 <div class ="col-md-6 col-12">
                                    <div class= "form-group">
                                       <label for ="date">Date</label>
-                                      <input type ="text" class="form-control" id = "datepicker">
+                                      <input type ="text" class="form-control" id = "pickupdate">
                                    </div>
                                 </div>
                                  <div class ="col-md-6 col-12">
@@ -75,7 +75,7 @@
                                              <option value="21:00">9:00 PM</option>
                                              <option value="21:30">9:30 PM</option>
                                              <option value="22:00">10:00 PM</option>
-                                         </select> 
+                                         </select>
                                     </div>
                                  </div>
                              </div> 
@@ -93,8 +93,8 @@
                                  <div class ="col-md-6 col-12">
                                     <div class= "form-group">
                                        <label for ="date">Date</label>
-                                       <input type ="text" class="form-control" id = "datepicker">
-                                    </div>      
+                                       <input type ="text" class="form-control" id = "dropoffdate">
+                                    </div>
                                  </div>
                                  <div class ="col-md-6 col-12">
                                     <div class ="form-group">
@@ -131,10 +131,10 @@
                                           <option value="21:30">9:30 PM</option>
                                           <option value="22:00">10:00 PM</option>
                                        </select>
-                                    </div>      
-                                 </div>      
+                                    </div>
+                                 </div>
                               </div>
-                           <button class="btn next-btn" type="submit">Next</button>
+                           <button class="btn next-btn" type="submit" id="nextpage">Next</button>
                         </div>      
                      </div>
                   </form> 
@@ -150,11 +150,117 @@
                         </form>
                     </div>
                  </div> 
-					
+//----------------------------wash dry page	
                </div>
-            <h2>Wash & Dry</h2></br>
+            <form>
+               <div id = "washdry-service">
+                 <div class="form-container" id="washpage">
+                     <div class = "container-fluid">
+                        <div class ="col-md-6 col-sm-12 col-12">
+                           <h2>Wash & Dry</h2>
+                              <div class ="row">
+                                 <div class ="col">
+                                    <label for ="load-size">Load Size</label><br>
+                                    <label class ="control-label" for ="large-size">large (20-25 pounds)</label>
+                                    <label for ="medium">Medium (12-19 pounds)</label> <br>
+                                    <label for ="small">Small (under 12 pounds)</label> <br> 
+                                 </div>
+                                 <div class ="col">
+                                    <label for ="number">Number</label>
+                                    <select class="form-control" id="large-size">
+                                       <option value="0">0</option>
+                                       <option value="1">1</option>
+                                       <option value="2">2</option>
+                                       <option value="3">3</option>
+                                       <option value="4">4</option>
+                                       <option value="5">5</option>
+                                       <option value="6">6</option>
+                                       <option value="7">7</option>
+                                       <option value="8">8</option>
+                                       <option value="9">9</option>
+                                    </select>
+                                    <select class="form-control" id="med-size">
+                                          <option value="0">0</option>
+                                          <option value="1">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                          <option value="4">4</option>
+                                          <option value="5">5</option>
+                                          <option value="6">6</option>
+                                          <option value="7">7</option>
+                                          <option value="8">8</option>
+                                          <option value="9">9</option>
+                                    </select>
+                                    <select class="form-control" id="small-size">
+                                       <option value="0">0</option>
+                                       <option value="1">1</option>
+                                       <option value="2">2</option>
+                                       <option value="3">3</option>
+                                       <option value="4">4</option>
+                                       <option value="5">5</option>
+                                       <option value="6">6</option>
+                                       <option value="7">7</option>
+                                       <option value="8">8</option>
+                                       <option value="9">9</option>
+                                    </select>
+                                 </div>
+                                 <div class ="col">
+                                    <label for ="price">Price</label>
+                                       <p id="output1"></p>
+                                       <p id="output2"></p>
+                                       <p id="output3"></p>
+                                 </div>   
+                              </div>   
+                        </div>
+                    </div>
+                 </div>
+               </div>
+            </form>
+            //------------------end of wash
+            <form>
+               <div id ="dry-clean">
+                  <div class="form-container" id="drypage">
+                     <div class = "container-fluid">
+                        <div class ="col-md-6 col-sm-12 col-12">
+                           <h2>Dry Clean</h2>
+                              <div class ="row">
+                                 <div class ="col">
+                                    <label for ="typecloth">Types of Clothing</label> <br>
+                                       <select class="custom-select custom-select-sm" id="cloth" name="cloth">
+                                          <option selected value="jacket" for ="num-item1">Jacket</option>
+                                          <option selected value="sweater"for ="num-item2">Sweater</option>
+                                       </select>
+                                 </div>
+                                 <div class ="col">
+                                    <label for ="number">Number</label>
+                                       <select class="form-control" id="num-item1">
+                                          <option value="0">0</option>
+                                          <option value="1">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                          <option value="4">4</option>
+                                          <option value="5">5</option>
+                                          <option value="6">6</option>
+                                          <option value="7">7</option>
+                                          <option value="8">8</option>
+                                          <option value="9">9</option>
+                                       </select>         
+                                 </div>
+                                 <div class ="col">
+                                    <label for ="price">Price</label>
+                                       <p id="outputitem1"></p>
+                                 </div>
+                              </div>
+                        </div>      
+                     </div>
+                  </div>
+
+               </div>
+            </form>
+            //------------------end of dry 
+            
          </div>
-      </div>   
+      </div>  
    </div>
 </section>
 

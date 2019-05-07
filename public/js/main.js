@@ -45,13 +45,49 @@ $(document).ready(function() {
 	});
 	// date picker
 	$( function() {
-    $( "#datepicker" ).datepicker();
+    $( "#datepicker,#pickupdate,#dropoffdate" ).datepicker();
 	} );
+	// total price of wash dry
+	$("#large-size").change(function () {
+		UpdateResult1();
+	});
+	$("#med-size").change(function () {
+		UpdateResult2();
+	});
+	$("#small-size").change(function () {
+		UpdateResult3();
+	});
+	function UpdateResult1()
+	{
+		var result = '$ ' + (($("#large-size option:selected").val() * 7) )
+		$("#output1").text(result).fadeIn();
+	}
+	function UpdateResult2()	
+	{
+		var result = '$ ' + (($("#med-size option:selected").val() * 6) )
+		$("#output2").text(result).fadeIn();
+	}
+	function UpdateResult3()	
+	{
+		var result = '$ ' + (($("#small-size option:selected").val() * 4) )
+		$("#output3").text(result).fadeIn();
+	}
+// total price of dry clean
+$("#num-item1").change(function () {
+	UpdateitemResult();
+});
+function UpdateitemResult()
+{
+	var result = '$ ' + (($("#num-item1 option:selected").val() * 5) )
+	$("#outputitem1").text(result).fadeIn();
+}
+
+
 	// schedule page next and back form
 	$('#next-page').hide();
-	$('#showResetForm').click(function(){
-		$('#signInContainer').hide();
-		$('#resetPasswordContainer').show();
+	$('#submit').click(function(){
+		$('#schedulepage').hide();
+		$('#washpage').show();
 	});
 	$('#showSignIn').click(function(){
 		$('#resetPasswordContainer').hide();

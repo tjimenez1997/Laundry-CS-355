@@ -285,3 +285,5 @@ label{
 #all-tasks-section .modal-btn{
 	font-size: 12px;
 }
+/*-------------- schedule-----------------*/
+label.hide {display: none;}

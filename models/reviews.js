@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     rating: DataTypes.INTEGER
   }, {});
   Reviews.associate = function(models) {
-    //Reviews.belongsTo(models.orders);
+    //Reviews.belongsTo(models.);
   };
   return Reviews;
 };

@@ -16,10 +16,9 @@ module.exports = (sequelize, DataTypes) => {
     deliverytime: DataTypes.TIME
   }, {});
   Orders.associate = function(models) {
-    Orders.hasMany(models.status);
-    Orders.hasMany(models.customer);
-    Orders.hasMany(models.worker);
-    Orders.hasMany(models.status);
+    //Orders.hasMany(models.status);
+    //Orders.hasMany(models.customer);
+    //Orders.hasMany(models.worker);
   };
   return Orders;
 };

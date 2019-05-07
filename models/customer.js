@@ -38,6 +38,8 @@ module.exports = (sequelize, DataTypes) => {
   Customer.associate = function(models) {
     Customer.belongsTo(models.Orders);
     Customer.belongsTo(models.Transactions);
+    Customer.belongsTo(models.Reviews);
+    Customer.belongsTo(models.CustomerBilling); 
   };
   return Customer;
 };

@@ -47,7 +47,7 @@ module.exports = (sequelize, DataTypes) => {
   };
 
   Workers.associate = function(models) {
-    //Workers.belongsTo(models.orders);
+    Workers.belongsTo(models.Orders);
   };
   return Workers;
 };

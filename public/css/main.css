@@ -285,3 +285,21 @@ label{
 #all-tasks-section .modal-btn{
 	font-size: 12px;
 }
+/*-------------- schedule -----------------*/
+.schedule-page{
+	padding-top: 120px;
+}
+.schedule-page .col-md-6{
+	padding: 0;
+}
+.schedule-page .container-fluid, .schedule-page .row,
+.schedule-page .form-container{
+	height: 100%;
+}
+.schedule-page .nextpageContainer{
+	position: fixed;
+    height: 100vh;
+    width: 50vw;
+    left: 0;
+    top: 0;
+}

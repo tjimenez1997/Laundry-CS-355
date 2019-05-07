@@ -47,4 +47,15 @@ $(document).ready(function() {
 	$( function() {
     $( "#datepicker" ).datepicker();
 	} );
+	// schedule page next and back form
+	$('#next-page').hide();
+	$('#showResetForm').click(function(){
+		$('#signInContainer').hide();
+		$('#resetPasswordContainer').show();
+	});
+	$('#showSignIn').click(function(){
+		$('#resetPasswordContainer').hide();
+		$('#signInContainer').show();
+	});
+	
 });

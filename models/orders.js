@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   //Table Column Description:
-  //orderdata_id: Holds a id for more information about this specific order (Orderdata holds laundry service type)
+  //orderdata_id: Holds a id for more information about this specific order.OrderData holds laundry service type)
   //status_id: Holds id for a status table. This will be used to update current status of a order
   //customer_id: Customer ID associated with this particular order
   //worker_id: Worker ID associated with this particular order
@@ -16,7 +16,12 @@ module.exports = (sequelize, DataTypes) => {
     deliverytime: DataTypes.TIME
   }, {});
   Orders.associate = function(models) {
-    // associations can be defined here
+    Orders.hasMany(models.Status);
+    Orders.hasMany(models.Customer);
+    Orders.hasMany(models.Workers);
+    Orders.belongsTo(models.OrderData);
+    Orders.belongsTo(models.Transactions);
+    Orders.belongsTo(models.Reviews);
   };
   return Orders;
 };

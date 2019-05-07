@@ -47,7 +47,10 @@ module.exports = (sequelize, DataTypes) => {
   };
 
   Workers.associate = function(models) {
-    // associations can be defined here
+    Workers.belongsTo(models.Orders);
+    Workers.belongsTo(models.Transactions);
+    Workers.belongsTo(models.Reviews);
+    Workers.belongsTo(models.WorkerBilling); 
   };
   return Workers;
 };

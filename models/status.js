@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     type: DataTypes.STRING
   }, {});
   Status.associate = function(models) {
-    // associations can be defined here
+    Status.belongsTo(models.Orders);
   };
   return Status;
 };

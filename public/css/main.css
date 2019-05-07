@@ -333,3 +333,5 @@ label{
 .modal-subtitle{
     font-weight: bold;
 }
+/*-------------- schedule-----------------*/
+label.hide {display: none;}

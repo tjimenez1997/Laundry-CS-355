@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     customerID: DataTypes.INTEGER
   }, {});
   CustomerBilling.associate = function(models) {
-    CustomerBilling.hasMany(models.Customer);
+    CustomerBilling.belongsTo(models.Customer);
   };
   return CustomerBilling;
 };

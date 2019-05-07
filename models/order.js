@@ -7,21 +7,14 @@ module.exports = (sequelize, DataTypes) => {
   //worker_id: Worker ID associated with this particular order
   //pickuptime: Final Pickup Time
   //deliverytime: Final Delivery Time
-  const Orders = sequelize.define('Orders', {
-    orderdata_id: DataTypes.INTEGER, 
-    status_id: DataTypes.INTEGER,
-    customer_id: DataTypes.INTEGER,
-    worker_id: DataTypes.INTEGER,
+  const Order = sequelize.define('Order', {
     pickuptime: DataTypes.TIME,
     deliverytime: DataTypes.TIME
   }, {});
-  Orders.associate = function(models) {
-    Orders.hasMany(models.Status);
-    Orders.hasMany(models.Customer);
-    Orders.hasMany(models.Workers);
-    Orders.belongsTo(models.OrderData);
-    Orders.belongsTo(models.Transactions);
-    Orders.belongsTo(models.Reviews);
+  Order.associate = function(models) {
+    Order.belongsTo(models.Customer);
+    Order.belongsTo(models.Worker);
+    Order.belongsTo(models.Status);
   };
-  return Orders;
+  return Order;
 };

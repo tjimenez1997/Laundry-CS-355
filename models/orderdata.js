@@ -9,11 +9,10 @@ module.exports = (sequelize, DataTypes) => {
     orderData_type2Price: DataTypes.REAL,
     orderData_type3: DataTypes.BOOLEAN,
     orderData_type3Amount: DataTypes.INTEGER,
-    orderData_type3Price: DataTypes.REAL,
-    order_id: DataTypes.INTEGER
+    orderData_type3Price: DataTypes.REAL
   }, {});
   OrderData.associate = function(models) {
-    OrderData.hasMany(models.Orders);
+    OrderData.belongsTo(models.Order);
   };
   return OrderData;
 };

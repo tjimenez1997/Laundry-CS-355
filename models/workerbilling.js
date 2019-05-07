@@ -4,11 +4,10 @@ module.exports = (sequelize, DataTypes) => {
     wBillingType1: DataTypes.BOOLEAN,
     wBillingType1data: DataTypes.STRING,
     wBillingType2: DataTypes.BOOLEAN,
-    wBillingType2data: DataTypes.STRING,
-    workerID: DataTypes.INTEGER
+    wBillingType2data: DataTypes.STRING
   }, {});
   WorkerBilling.associate = function(models) {
-    WorkerBilling.hasMany(models.Workers);
+    WorkerBilling.belongsTo(models.Worker);
   };
   return WorkerBilling;
 };

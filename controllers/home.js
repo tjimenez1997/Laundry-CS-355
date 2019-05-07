@@ -26,7 +26,7 @@ router.post('/', (req, res) => {
   let input = req.body;
   let customerLogin = true;
 
-  models.Workers.findOne({
+  models.Worker.findOne({
     where:{
         email: input.emailAddress
     }
@@ -62,7 +62,7 @@ router.post('/', (req, res) => {
                 })
               }).catch((error) => res.status(400).send(error));
     } else {
-           models.Workers.findOne({
+           models.Worker.findOne({
               where:{
                   email: input.emailAddress
               }

@@ -9,6 +9,7 @@ router.use('/sign-up', require('./sign-up'));
 router.use('/schedule',require('./schedule'));
 router.use('/all-tasks',require('./all-tasks'));
 router.use('/account',require('./account'));
+router.use('/choose',require('./choose'));
 
 router.use('/debug', require('./debug'));
 

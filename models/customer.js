@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     firstname: DataTypes.STRING,
     lastname: DataTypes.STRING,
     phone: DataTypes.STRING,
-    email: DataTypes.STRING,
+    email: {type: DataTypes.STRING, primaryKey: true},
     password: DataTypes.TEXT,
     address: DataTypes.STRING,
     zipcode: DataTypes.INTEGER
@@ -36,10 +36,7 @@ module.exports = (sequelize, DataTypes) => {
   };
 
   Customer.associate = function(models) {
-    Customer.belongsTo(models.Orders);
-    Customer.belongsTo(models.Transactions);
-    Customer.belongsTo(models.Reviews);
-    Customer.belongsTo(models.CustomerBilling); 
+
   };
   return Customer;
 };

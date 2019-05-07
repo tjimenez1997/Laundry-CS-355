@@ -16,11 +16,11 @@ module.exports = (sequelize, DataTypes) => {
   //pending_tasks: Holds current pending tasks for a worker (cannot be available if over a certain amount of jobs [Allow batch laundry pickups?])
   //completed_tasks:Holds the current amount of completed tasks for a worker
 
-  const Workers = sequelize.define('Workers', {
+  const Worker = sequelize.define('Worker', {
     firstname: DataTypes.STRING,
     lastname: DataTypes.STRING,
     phone: DataTypes.STRING,
-    email: DataTypes.STRING,
+    email: {type: DataTypes.STRING, primaryKey: true},
     password: DataTypes.TEXT,
     address: DataTypes.STRING,
     zipcode: DataTypes.INTEGER,
@@ -31,13 +31,13 @@ module.exports = (sequelize, DataTypes) => {
     completed_tasks: DataTypes.INTEGER
   }, {});
 
-  Workers.beforeSave((workers, options)=> {
+  Worker.beforeSave((workers, options)=> {
       if (workers.changed('password')) {
           workers.password = bcrypt.hashSync(workers.password, bcrypt.genSaltSync(10), null);
       }
   });
 
-  Workers.prototype.comparePassword = function(input, cb){
+  Worker.prototype.comparePassword = function(input, cb){
     bcrypt.compare(input, this.password, function (err, isMatch) {
         if (err) {
             return cb(err);
@@ -46,11 +46,7 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  Workers.associate = function(models) {
-    Workers.belongsTo(models.Orders);
-    Workers.belongsTo(models.Transactions);
-    Workers.belongsTo(models.Reviews);
-    Workers.belongsTo(models.WorkerBilling); 
+  Worker.associate = function(models) {
   };
-  return Workers;
+  return Worker;
 };

@@ -353,3 +353,7 @@ label{
 }
 /*-------------- schedule-----------------*/
 label.hide {display: none;}
+
+#nextpageContainer{
+	padding: 100px 15vw;
+}

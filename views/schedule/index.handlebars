@@ -20,247 +20,250 @@
      </ul>
     </div>
 </nav>
-<section id ="schedule-page">
-   <div class ="container" id ="nextpageContainer">
-      <div class="schedule-container d-flex justify-content-center align-items-center">
-         <div class = "container-fluid" id="schedulepage">
-            <h1 class ="section-title">Schedule a Pick Up </h1>
-               <div class="form-group">
+<!--  d-flex justify-content-center align-items-center -->
+<section id="schedule-page">
+   <div class="container" id ="nextpageContainer">
+
+      <div class="row">
+        <h1 class ="section-title">Schedule a Pick Up</h1>
+        <div class="col-sm-12 col-12">
+          <form>
+            <div id="schedule-container">
+              <div class="form-group">
                   <label for ="address">Address</label>
                   <input type ="text" class="form-control" id="address">
-               </div>
-               <div class ="col-md-6 col-sm-12 col-12">
-                  <form>
-                     <div class ="form-container" id = "pickup">
-                        <div class ="pick-up-container">
-                           <h2>Pick Up</h2>
-                             <div class ="row">
-                                <div class ="col-md-6 col-12">
-                                   <div class= "form-group">
-                                      <label for ="date">Date</label>
-                                      <input type ="text" class="form-control" id = "pickupdate">
-                                   </div>
-                                </div>
-                                 <div class ="col-md-6 col-12">
-                                    <div class ="form-group">
-                                       <label for ="time">Time</label>
-                                         <select class ="custom-select custom-select-sm" id ="time" name="time">
-                                             <option value="7:00">7:00 AM</option>
-                                             <option value="7:30">7:30 AM</option>
-                                             <option value="8:00">8:00 AM</option>
-                                             <option value="8:30">8:30 AM</option>
-                                             <option value="9:00">9:00 AM</option>
-                                             <option value="9:30">9:30 AM</option>
-                                             <option value="10:00">10:00 AM</option>
-                                             <option value="11:00">11:00 AM</option>
-                                             <option value="11:30">11:30 AM</option>
-                                             <option value="12:00">12:00 PM</option>
-                                             <option value="12:30">12:30 PM</option>
-                                             <option value="13:00">1:00 PM</option>
-                                             <option value="13:30">1:30 PM</option>
-                                             <option value="14:00">2:00 PM</option>
-                                             <option value="14:30">2:30 PM</option>
-                                             <option value="15:00">3:00 PM</option>
-                                             <option value="15:30">3:30 PM</option>
-                                             <option value="16:00">4:00 PM</option>
-                                             <option value="16:30">4:30 PM</option>
-                                             <option value="17:00">5:00 PM</option>
-                                             <option value="17:30">5:30 PM</option>
-                                             <option value="18:00">6:00 PM</option>
-                                             <option value="18:30">6:30 PM</option>
-                                             <option value="19:00">7:00 PM</option>
-                                             <option value="19:30">7:30 PM</option>
-                                             <option value="20:00">8:00 PM</option>
-                                             <option value="20:30">8:30 PM</option>
-                                             <option value="21:00">9:00 PM</option>
-                                             <option value="21:30">9:30 PM</option>
-                                             <option value="22:00">10:00 PM</option>
-                                         </select>
-                                    </div>
-                                 </div>
-                             </div> 
-                        </div>
-                     </div>
-                  </form>
-               </div>
-  //--------------------------end of pickup
-               <div class ="col-md-6 col-sm-12 col-12">
-                  <form>
-                     <div class ="form-container" id = "dropoff">
-                        <div class ="drop-off-container">
-                           <h2>Drop Off</h2>
-                              <div class ="row">
-                                 <div class ="col-md-6 col-12">
-                                    <div class= "form-group">
-                                       <label for ="date">Date</label>
-                                       <input type ="text" class="form-control" id = "dropoffdate">
-                                    </div>
-                                 </div>
-                                 <div class ="col-md-6 col-12">
-                                    <div class ="form-group">
-                                       <label for ="time">Time</label>
-                                       <select class ="custom-select custom-select-sm" id ="time" name="time">
-                                          <option value="7:00">7:00 AM</option>
-                                          <option value="7:30">7:30 AM</option>
-                                          <option value="8:00">8:00 AM</option>
-                                          <option value="8:30">8:30 AM</option>
-                                          <option value="9:00">9:00 AM</option>
-                                          <option value="9:30">9:30 AM</option>
-                                          <option value="10:00">10:00 AM</option>
-                                          <option value="11:00">11:00 AM</option>
-                                          <option value="11:30">11:30 AM</option>
-                                          <option value="12:00">12:00 PM</option>
-                                          <option value="12:30">12:30 PM</option>
-                                          <option value="13:00">1:00 PM</option>
-                                          <option value="13:30">1:30 PM</option>
-                                          <option value="14:00">2:00 PM</option>
-                                          <option value="14:30">2:30 PM</option>
-                                          <option value="15:00">3:00 PM</option>
-                                          <option value="15:30">3:30 PM</option>
-                                          <option value="16:00">4:00 PM</option>
-                                          <option value="16:30">4:30 PM</option>
-                                          <option value="17:00">5:00 PM</option>
-                                          <option value="17:30">5:30 PM</option>
-                                          <option value="18:00">6:00 PM</option>
-                                          <option value="18:30">6:30 PM</option>
-                                          <option value="19:00">7:00 PM</option>
-                                          <option value="19:30">7:30 PM</option>
-                                          <option value="20:00">8:00 PM</option>
-                                          <option value="20:30">8:30 PM</option>
-                                          <option value="21:00">9:00 PM</option>
-                                          <option value="21:30">9:30 PM</option>
-                                          <option value="22:00">10:00 PM</option>
-                                       </select>
-                                    </div>
-                                 </div>
-                              </div>
-                           <button class="btn next-btn" type="submit" id="nextpage">Next</button>
-                        </div>      
-                     </div>
-                  </form> 
-               </div>
-//--------------------------end of drop off                                
-               <div class="form-container" id="next-page">
+              </div>
+              <span>Pick Up</span>
+              <div class= "form-group">
+                <label for ="date">Date</label>
+                <input type ="text" class="form-control" id = "pickupdate">
+              </div>
+              <div class ="form-group">
+                           <label for ="time">Time</label>
+                             <select class ="custom-select custom-select-sm" id ="time" name="time">
+                   <option value="7:00">7:00 AM</option>
+                   <option value="7:30">7:30 AM</option>
+                   <option value="8:00">8:00 AM</option>
+                   <option value="8:30">8:30 AM</option>
+                   <option value="9:00">9:00 AM</option>
+                   <option value="9:30">9:30 AM</option>
+                   <option value="10:00">10:00 AM</option>
+                   <option value="11:00">11:00 AM</option>
+                   <option value="11:30">11:30 AM</option>
+                   <option value="12:00">12:00 PM</option>
+                   <option value="12:30">12:30 PM</option>
+                   <option value="13:00">1:00 PM</option>
+                   <option value="13:30">1:30 PM</option>
+                   <option value="14:00">2:00 PM</option>
+                   <option value="14:30">2:30 PM</option>
+                   <option value="15:00">3:00 PM</option>
+                   <option value="15:30">3:30 PM</option>
+                   <option value="16:00">4:00 PM</option>
+                   <option value="16:30">4:30 PM</option>
+                   <option value="17:00">5:00 PM</option>
+                   <option value="17:30">5:30 PM</option>
+                   <option value="18:00">6:00 PM</option>
+                   <option value="18:30">6:30 PM</option>
+                   <option value="19:00">7:00 PM</option>
+                   <option value="19:30">7:30 PM</option>
+                   <option value="20:00">8:00 PM</option>
+                   <option value="20:30">8:30 PM</option>
+                   <option value="21:00">9:00 PM</option>
+                   <option value="21:30">9:30 PM</option>
+                   <option value="22:00">10:00 PM</option>
+                             </select>
+              </div>
+              <span>Drop Off</span>
+              <div class= "form-group">
+                           <label for ="date">Date</label>
+                           <input type ="text" class="form-control" id = "dropoffdate">
+              </div>
+              <div class ="form-group">
+                           <label for ="time">Time</label>
+                           <select class ="custom-select custom-select-sm" id ="time" name="time">
+                              <option value="7:00">7:00 AM</option>
+                              <option value="7:30">7:30 AM</option>
+                              <option value="8:00">8:00 AM</option>
+                              <option value="8:30">8:30 AM</option>
+                              <option value="9:00">9:00 AM</option>
+                              <option value="9:30">9:30 AM</option>
+                              <option value="10:00">10:00 AM</option>
+                              <option value="11:00">11:00 AM</option>
+                              <option value="11:30">11:30 AM</option>
+                              <option value="12:00">12:00 PM</option>
+                              <option value="12:30">12:30 PM</option>
+                              <option value="13:00">1:00 PM</option>
+                              <option value="13:30">1:30 PM</option>
+                              <option value="14:00">2:00 PM</option>
+                              <option value="14:30">2:30 PM</option>
+                              <option value="15:00">3:00 PM</option>
+                              <option value="15:30">3:30 PM</option>
+                              <option value="16:00">4:00 PM</option>
+                              <option value="16:30">4:30 PM</option>
+                              <option value="17:00">5:00 PM</option>
+                              <option value="17:30">5:30 PM</option>
+                              <option value="18:00">6:00 PM</option>
+                              <option value="18:30">6:30 PM</option>
+                              <option value="19:00">7:00 PM</option>
+                              <option value="19:30">7:30 PM</option>
+                              <option value="20:00">8:00 PM</option>
+                              <option value="20:30">8:30 PM</option>
+                              <option value="21:00">9:00 PM</option>
+                              <option value="21:30">9:30 PM</option>
+                              <option value="22:00">10:00 PM</option>
+                           </select>
+                </div>
+                <a class="btn next-btn" id="service-next-btn">Next</button>
+            </div>
+<!--  --------------- wash and dry - section 2  ---------------- -->
+            <div id="washdry-service">
+              <a class="" id="back-to-schedule"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></a>
+              <span>Wash & Dry</span>
+              <div class="row">
+                <div class ="col-sm-4 col-4">
+                  <label for ="load-size">Load Size</label><br>
+                  <label class ="control-label" for ="large-size">large (20-25 pounds)</label>
+                  <label for ="medium">Medium (12-19 pounds)</label> <br>
+                  <label for ="small">Small (under 12 pounds)</label> <br> 
+                </div>
+
+                <div class ="col-sm-4 col-4">
+                        <label for ="number">Number</label>
+                        <select class="form-control" id="large-size" name="large-size">
+                           <option value="0">0</option>
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                           <option value="4">4</option>
+                           <option value="5">5</option>
+                           <option value="6">6</option>
+                           <option value="7">7</option>
+                           <option value="8">8</option>
+                           <option value="9">9</option>
+                        </select>
+                        <select class="form-control" id="med-size">
+                              <option value="0">0</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                        </select>
+                        <select class="form-control" id="small-size">
+                           <option value="0">0</option>
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                           <option value="4">4</option>
+                           <option value="5">5</option>
+                           <option value="6">6</option>
+                           <option value="7">7</option>
+                           <option value="8">8</option>
+                           <option value="9">9</option>
+                        </select>
+                  </div>
+                  <div class="col-sm-4 col-4">
+                        <label for ="price">Price</label>
+                           <p id="output1"></p>
+                           <p id="output2"></p>
+                           <p id="output3"></p>
+                  </div>   
+              </div>
+
+              <span>Dry Clean</span>
+              <div class="row">
+                <div class ="col-sm-4 col-4">
+                        <label for ="typecloth">Categories</label>
+                           <select class="custom-select custom-select-sm" id="cloth" name="cloth">
+                              <option selected value="jacket" for ="num-item1">Jacket</option>
+                              <option selected value="sweater"for ="num-item2">Sweater</option>
+                           </select>
+                </div>
+                <div class ="col-sm-4 col-4">
+                        <label for="number">Number</label>
+                           <select class="form-control" id="num-item1">
+                              <option value="0">0</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                           </select>         
+                </div>
+                <div class ="col-sm-4 col-4">
+                        <label for ="price">Price</label>
+                           <p id="outputitem1"></p>
+                </div>
+              </div>
+              <div class="row" id="additional-category">
+              </div>
+              <div class="row">
+                <div class="col-sm-12 col-12">
+                      <a id="add-category-btn">+ Add Category</a>
+                </div>
+              </div>
+
+
+                    
+                
+            </div>
+
+
+
+          </form>
+        </div>
+
+
+
+
+
+
+
+
+          </div> 
+<!-- end of drop off  -->                   
+<!--                <div class="form-container" id="next-page">
                   <div class="sign-in-container d-flex justify-content-center align-items-center">
                      <div class="nextpage-content">
-                        <a class="back-btn" id="showSignIn"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></a>
+                        
 
                         <form id="reset-form" class="registration-form form-validation" novalidate>
                            <p>hi</p>
                         </form>
                     </div>
                  </div> 
-//----------------------------wash dry page	
-               </div>
-            <form>
-               <div id = "washdry-service">
-                 <div class="form-container" id="washpage">
-                     <div class = "container-fluid">
-                        <div class ="col-md-6 col-sm-12 col-12">
-                           <h2>Wash & Dry</h2>
-                              <div class ="row">
-                                 <div class ="col">
-                                    <label for ="load-size">Load Size</label><br>
-                                    <label class ="control-label" for ="large-size">large (20-25 pounds)</label>
-                                    <label for ="medium">Medium (12-19 pounds)</label> <br>
-                                    <label for ="small">Small (under 12 pounds)</label> <br> 
-                                 </div>
-                                 <div class ="col">
-                                    <label for ="number">Number</label>
-                                    <select class="form-control" id="large-size">
-                                       <option value="0">0</option>
-                                       <option value="1">1</option>
-                                       <option value="2">2</option>
-                                       <option value="3">3</option>
-                                       <option value="4">4</option>
-                                       <option value="5">5</option>
-                                       <option value="6">6</option>
-                                       <option value="7">7</option>
-                                       <option value="8">8</option>
-                                       <option value="9">9</option>
-                                    </select>
-                                    <select class="form-control" id="med-size">
-                                          <option value="0">0</option>
-                                          <option value="1">1</option>
-                                          <option value="2">2</option>
-                                          <option value="3">3</option>
-                                          <option value="4">4</option>
-                                          <option value="5">5</option>
-                                          <option value="6">6</option>
-                                          <option value="7">7</option>
-                                          <option value="8">8</option>
-                                          <option value="9">9</option>
-                                    </select>
-                                    <select class="form-control" id="small-size">
-                                       <option value="0">0</option>
-                                       <option value="1">1</option>
-                                       <option value="2">2</option>
-                                       <option value="3">3</option>
-                                       <option value="4">4</option>
-                                       <option value="5">5</option>
-                                       <option value="6">6</option>
-                                       <option value="7">7</option>
-                                       <option value="8">8</option>
-                                       <option value="9">9</option>
-                                    </select>
-                                 </div>
-                                 <div class ="col">
-                                    <label for ="price">Price</label>
-                                       <p id="output1"></p>
-                                       <p id="output2"></p>
-                                       <p id="output3"></p>
-                                 </div>   
-                              </div>   
-                        </div>
-                    </div>
-                 </div>
-               </div>
+               </div> -->
+<!-- wash dry page  -->
+<!--             <form>
+
             </form>
-            //------------------end of wash
             <form>
                <div id ="dry-clean">
                   <div class="form-container" id="drypage">
                      <div class = "container-fluid">
                         <div class ="col-md-6 col-sm-12 col-12">
-                           <h2>Dry Clean</h2>
+                           
                               <div class ="row">
-                                 <div class ="col">
-                                    <label for ="typecloth">Types of Clothing</label> <br>
-                                       <select class="custom-select custom-select-sm" id="cloth" name="cloth">
-                                          <option selected value="jacket" for ="num-item1">Jacket</option>
-                                          <option selected value="sweater"for ="num-item2">Sweater</option>
-                                       </select>
-                                 </div>
-                                 <div class ="col">
-                                    <label for ="number">Number</label>
-                                       <select class="form-control" id="num-item1">
-                                          <option value="0">0</option>
-                                          <option value="1">1</option>
-                                          <option value="2">2</option>
-                                          <option value="3">3</option>
-                                          <option value="4">4</option>
-                                          <option value="5">5</option>
-                                          <option value="6">6</option>
-                                          <option value="7">7</option>
-                                          <option value="8">8</option>
-                                          <option value="9">9</option>
-                                       </select>         
-                                 </div>
-                                 <div class ="col">
-                                    <label for ="price">Price</label>
-                                       <p id="outputitem1"></p>
-                                 </div>
+
+
+
                               </div>
                         </div>      
                      </div>
                   </div>
 
                </div>
-            </form>
-            //------------------end of dry 
+            </form> -->
+           <!--  end of dry  -->
             
-         </div>
-      </div>  
    </div>
 </section>
 

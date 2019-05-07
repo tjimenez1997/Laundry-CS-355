@@ -3,13 +3,13 @@ theme colors
 
 blue: #4a7fe3;
 white: #ffffff;
-black: #343C48;
+black: #3f5371;
 grey: #ced4da;
 red (error color): #e47983;
 */
 
 body{
-	color: #343C48;
+	color: #3f5371;
 	font-size: 16px;
 	overflow-x: hidden;
 }
@@ -176,7 +176,7 @@ a{
     margin-bottom: -2px;
 }
 label{
-	color: #343C48;
+	color: #3f5371;
 }
 .availability label{
 	font-size: 12px;
@@ -185,12 +185,12 @@ label{
 
 }
 .availability .custom-select, .form-control, .custom-select{
-	color: #343C48;
+	color: #3f5371;
     border: 2px solid #ced4da;
 }
 .availability .custom-select:focus, 
 .form-control:focus{
-    color: #343C48;
+    color: #3f5371;
     border: 2px solid #4a7fe3;
     box-shadow: none;
 }
@@ -257,7 +257,7 @@ label{
 }
 .task-date{
 	font-size: 1.5rem;
-	color: #343C48;
+	color: #3f5371;
     margin-bottom: 10px;
 }
 .content-title{
@@ -287,6 +287,7 @@ label{
 	font-size: 12px;
 }
 .modal{
+	padding: 0 !important;
 	background: rgba(255, 255, 255, 0.75);
 }
 .order-modal .row{
@@ -329,7 +330,7 @@ label{
   content: ' ';
   height: 33px;
   width: 2px;
-  background-color: #343C48;
+  background-color: #3f5371;
 }
 .close-btn:before {
   transform: rotate(45deg);
@@ -347,7 +348,7 @@ label{
 	margin-bottom: 0;
 }
 #model-final-total{
-	border-top: 1px solid #343C48;
+	border-top: 1px solid #3f5371;
 	margin-top: 10px;
 }
 /*-------------- schedule-----------------*/

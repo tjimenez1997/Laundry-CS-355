@@ -30,6 +30,24 @@ a{
 .theme-link:hover{
 	text-decoration: underline !important;
 }
+.theme-btn{
+	display: block;
+    border: 2px solid #4a7fe3;
+    box-shadow: inset 0 0 0 0 #ffffff;
+	-webkit-transition: ease-out 0.4s;
+	background-color: #4a7fe3;
+	-moz-transition: ease-out 0.4s;
+	transition: ease-out 0.4s;
+	border-radius: .25rem;
+	text-align: center;	
+	color: #ffffff !important;
+}
+.theme-btn:hover{
+	color: #4a7fe3 !important;
+	border: 2px solid #4a7fe3;;
+	background-color: #ffffff;
+	box-shadow: inset 0 0 0 45px #ffffff;
+}
 .modal-btn{
 	cursor: pointer;
 	border: 2px solid #4a7fe3;
@@ -207,21 +225,9 @@ label{
 }
 .submit-btn{
 	display: block;
-	color: #ffffff;
     width: 50%;
     margin-top: 2rem;
-    border: 2px solid #4a7fe3;
-    box-shadow: inset 0 0 0 0 #ffffff;
-	-webkit-transition: ease-out 0.4s;
-	background-color: #4a7fe3;
-	-moz-transition: ease-out 0.4s;
-	transition: ease-out 0.4s;
-}
-.submit-btn:hover{
-	color: #4a7fe3;
-	border: 2px solid #4a7fe3;;
-	background-color: #ffffff;
-	box-shadow: inset 0 0 0 45px #ffffff;
+
 }
 .show-error{
 	display: block;
@@ -271,9 +277,7 @@ label{
 	margin-bottom: 5px;
 }
 #all-tasks-section .modal-btn{
-    text-align: center;
-    padding: 5px 15px;
-    border-radius: .25rem;
+
 }
 .entry-row{
 	border-radius: 6px;
@@ -285,6 +289,10 @@ label{
 }
 #all-tasks-section .modal-btn{
 	font-size: 12px;
+	text-align: center;
+    padding: 5px 15px;
+    border-radius: .25rem;
+    width: 105px;
 }
 .modal{
 	padding: 0 !important;
@@ -332,10 +340,10 @@ label{
   width: 2px;
   background-color: #3f5371;
 }
-.close-btn:before {
+.close-btn:before{
   transform: rotate(45deg);
 }
-.close-btn:after {
+.close-btn:after{
   transform: rotate(-45deg);
 }
 .modal-subtitle{
@@ -351,6 +359,22 @@ label{
 	border-top: 1px solid #3f5371;
 	margin-top: 10px;
 }
+.pending-actions{
+	height: 100%;
+}
+.accept-btn{
+	width: 70px;
+	font-size: 12px;
+	width: 105px;
+	padding: 5px 15px;
+}
+/*-------------- find work-----------------*/
+.work-section-title{
+	margin-bottom: 50px;
+}
+
+
+
 /*-------------- schedule-----------------*/
 label.hide {display: none;}
 

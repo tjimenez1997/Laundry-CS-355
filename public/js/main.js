@@ -16,7 +16,6 @@ $(document).ready(function(){
   	//add input validation to forms
   	window.addEventListener('load', function() {
 	    let forms = $('.form-validation');
-
 	    let validation = Array.prototype.filter.call(forms, function(form) {
 	      form.addEventListener('submit', function(event) {
 	        if (form.checkValidity() === false) {

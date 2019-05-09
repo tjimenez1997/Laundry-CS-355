@@ -5,11 +5,11 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/find-work">Find Work</a>
-      </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/">All Tasks <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Find Work<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/all-tasks">All Tasks</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/account">Account</a>
@@ -22,8 +22,31 @@
 </nav>
 <section id="all-tasks-section">
   <div class="container">
-    <h1 class="section-title">All Tasks</h1>
-    <h2 class="h3 content-title">In Progress (2)</h2>
+    <h1 class="section-title work-section-title">Find Work</h1>
+    <div class="row entry-row">
+      <div class="col-lg-3 col-sm-6 col-6">
+        <span class="col-title">Brenda Walker</span>
+        <p>770 Michigan Avenue, Gibsonia, PA 15044</p>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-6">
+        <span class="col-title">Services</span>
+        <span>Wash & Dry, Dry Clean</span>
+      </div>
+      <div class="col-lg-2 col-sm-6 col-6">
+        <span class="col-title">Pickup</span>
+        <span>3:00 PM, 5/5/2019</span>
+      </div>
+      <div class="col-lg-2 col-sm-6 col-6">
+        <span class="col-title">Rating</span>
+        <p>@ @ @ @ @</p>
+      </div>
+      <div class="col-lg-2 col-sm-12 col-12">
+        <div class="d-flex flex-lg-column flex-row justify-content-lg-around justify-content-start align-items-end pending-actions">
+          <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
+          <a class="theme-btn accept-btn">Accept</a>
+        </div>
+      </div>
+    </div>
     <div class="row entry-row">
       <div class="col-lg-3 col-sm-6 col-6">
         <span class="col-title">Brenda Walker</span>
@@ -38,11 +61,14 @@
         <span>3:00 PM, 5/5/2019</span>
       </div>
       <div class="col-lg-2 col-sm-6 col-6">
-        <span class="col-title">Rate the Customer</span>
+        <span class="col-title">Rating</span>
         <p>@ @ @ @ @</p>
       </div>
-      <div class="col-lg-2 col-sm-12 col-12 d-flex justify-content-lg-end justify-content-start align-items-center">
-        <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
+      <div class="col-lg-2 col-sm-12 col-12">
+        <div class="d-flex flex-lg-column flex-row justify-content-lg-around justify-content-start align-items-end pending-actions">
+          <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
+          <a class="theme-btn accept-btn">Accept</a>
+        </div>
       </div>
     </div>
     <div class="row entry-row">
@@ -59,34 +85,14 @@
         <span>3:00 PM, 5/5/2019</span>
       </div>
       <div class="col-lg-2 col-sm-6 col-6">
-        <span class="col-title">Rate the Customer</span>
+        <span class="col-title">Rating</span>
         <p>@ @ @ @ @</p>
       </div>
-      <div class="col-lg-2 col-sm-12 col-12 d-flex justify-content-lg-end justify-content-start align-items-center">
-        <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
-      </div>
-    </div>
-
-    <h2 class="h3 content-title">Completed (2)</h2>
-    <div class="row entry-row">
-      <div class="col-lg-3 col-sm-6 col-6">
-        <span class="col-title">Brenda Walker</span>
-        <p>770 Michigan Avenue, Gibsonia, PA 15044</p>
-      </div>
-      <div class="col-lg-3 col-sm-6 col-6">
-        <span class="col-title">Services</span>
-        <span>Wash & Dry, Dry Clean</span>
-      </div>
-      <div class="col-lg-2 col-sm-6 col-6">
-        <span class="col-title">Pickup</span>
-        <span>3:00 PM, 4/25/2019</span>
-      </div>
-      <div class="col-lg-2 col-sm-6 col-6">
-        <span class="col-title">Rate the Customer</span>
-        <p>@ @ @ @ @</p>
-      </div>
-      <div class="col-lg-2 col-sm-12 col-12 d-flex justify-content-lg-end justify-content-start align-items-center">
-        <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
+      <div class="col-lg-2 col-sm-12 col-12">
+        <div class="d-flex flex-lg-column flex-row justify-content-lg-around justify-content-start align-items-end pending-actions">
+          <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
+          <a class="theme-btn accept-btn">Accept</a>
+        </div>
       </div>
     </div>
     <div class="row entry-row">
@@ -100,14 +106,17 @@
       </div>
       <div class="col-lg-2 col-sm-6 col-6">
         <span class="col-title">Pickup</span>
-        <span>3:00 PM, 4/25/2019</span>
+        <span>3:00 PM, 5/5/2019</span>
       </div>
       <div class="col-lg-2 col-sm-6 col-6">
-        <span class="col-title">Rate the Customer</span>
+        <span class="col-title">Rating</span>
         <p>@ @ @ @ @</p>
       </div>
-      <div class="col-lg-2 col-sm-12 col-12 d-flex justify-content-lg-end justify-content-start align-items-center">
-        <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
+      <div class="col-lg-2 col-sm-12 col-12">
+        <div class="d-flex flex-lg-column flex-row justify-content-lg-around justify-content-start align-items-end pending-actions">
+          <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
+          <a class="theme-btn accept-btn">Accept</a>
+        </div>
       </div>
     </div>
 
@@ -136,23 +145,23 @@
                   <span>231-022-1232</span>
                 </div>
                 <div class="col-lg-3 col-sm-6 col-6">
-                  <span class="col-title">Rate the Customer</span>
+                  <span class="col-title">Rating</span>
                   <span>@ @ @ @ @</span>
                 </div>
               </div>
               <h5 class="modal-subtitle">Wash &amp; Dry</h5>
               <div class="row">
-                <div class="col-lg-2 col-sm-4 col-4">
+                <div class="col-lg-3 col-sm-6 col-6">
                   <span class="col-title">Load Size</span>
                   <span>Large</span>
                   <span>Small</span>
                 </div>
-                <div class="col-lg-2 col-sm-4 col-4">
+                <div class="col-lg-3 col-sm-6 col-6">
                   <span class="col-title">Number</span>
                   <span>2</span>
                   <span>1</span>
                 </div>
-                <div class="col-lg-2 col-sm-4 col-4">
+                <div class="col-lg-3 col-sm-6 col-6">
                   <span class="col-title">Prices</span>
                   <span>$14</span>
                   <span>$5</span>
@@ -161,33 +170,19 @@
                   <span class="col-title">Drop-off</span>
                   <span>3:00 PM, 5/5/2019</span>
                 </div>
-                <div class="col-lg-3 col-sm-6 col-6">
-                  <span class="col-title">Order Status</span>
-                  <form>
-                      <div class="form-group">
-                        <select class="custom-select custom-select-sm" id="orderStatus" name="washOrderStatus">
-                          <option value="waiting">Waiting for pickup</option>
-                          <option value="pickedUp">Picked up</option>
-                          <option value="cleaning">Cleaning</option>
-                            <option value="droppingOff">Dropping off</option>
-                            <option value="completed">Completed</option>
-                        </select>
-                      </div>
-                  </form>
-                </div>
               </div>
 
               <h5 class="modal-subtitle">Dry Clean</h5>
               <div class="row">
-                <div class="col-lg-2 col-sm-4 col-4">
+                <div class="col-lg-3 col-sm-6 col-6">
                   <span class="col-title">Category</span>
                   <span>Jacket</span>
                 </div>
-                <div class="col-lg-2 col-sm-4 col-4">
+                <div class="col-lg-3 col-sm-6 col-6">
                   <span class="col-title">Number</span>
                   <span>1</span>
                 </div>
-                <div class="col-lg-2 col-sm-4 col-4">
+                <div class="col-lg-3 col-sm-6 col-6">
                   <span class="col-title">Prices</span>
                   <span>$10</span>
                 </div>
@@ -195,24 +190,10 @@
                   <span class="col-title">Drop-off</span>
                   <span>3:00 PM, 5/7/2019</span>
                 </div>
-                <div class="col-lg-3 col-sm-6 col-6">
-                  <span class="col-title">Order Status</span>
-                  <form>
-                      <div class="form-group">
-                        <select class="custom-select custom-select-sm" id="orderStatus" name="dryCleanOrderStatus">
-                          <option value="waiting">Waiting for pickup</option>
-                          <option value="pickedUp">Picked up</option>
-                          <option value="cleaning">Cleaning</option>
-                            <option value="droppingOff">Dropping off</option>
-                            <option value="completed">Completed</option>
-                        </select>
-                      </div>
-                  </form>
-                </div>
               </div>
 
               <div class="row" id="cost-container">
-                  <div class="col-md-4 col-6">
+                  <div class="col-md-4 col-sm-12 col-12">
                       <div class="d-flex justify-content-between">
                         <span>Subtotal:</span>
                         <span>$29</span>
@@ -226,7 +207,12 @@
                         <span>$37</span>
                       </div>
                   </div>
-                  <div class="col-md-4 offset-md-4 offset-6"></div>
+
+                  <div class="col-md-4"></div>
+                  <div class="col-md-4 col-sm-12 col-12 d-flex justify-content-end align-items-end">
+                    <a class="theme-btn accept-btn">Accept</a>
+                  </div>
+                 <!--  <div class="col-md-4 offset-md-4 offset-6"></div> -->
               </div>
               
             </div>

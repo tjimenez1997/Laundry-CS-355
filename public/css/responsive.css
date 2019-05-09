@@ -24,6 +24,10 @@
 	.entry-row div{
 		margin-bottom: 20px;
 	}
+	/*-------------- find work -----------------*/
+	#all-tasks-section .accept-btn{
+		margin-left: 20px;
+	}	
 }
 @media only screen and (max-width: 767px) {
 	/*-------------- sign in and sign up -----------------*/
@@ -43,4 +47,8 @@
 	.sign-up-container {
 	    padding: 70px 8vw 40px 8vw;
 	}
+	/*-------------- find work -----------------*/
+	.modal .accept-btn{
+		margin-top: 20px;
+	}	
 }

@@ -372,9 +372,22 @@ label{
 .work-section-title{
 	margin-bottom: 50px;
 }
-
-
-
+/*-------------- order history-----------------*/
+.order-modal .row .progress{
+	margin-bottom: 0;
+    border-radius: .5rem;
+}
+.order-modal .row .progress-bar{
+	margin-bottom: 0;
+    background-color: #4a7fe3;
+    border-radius: 0.5rem;
+}
+#order-history-modal .sm-label{
+	display: inline-block;
+	font-size: 12px;
+	width: 25%;
+    text-align: center;
+}
 /*-------------- schedule-----------------*/
 label.hide {display: none;}
 

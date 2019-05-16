@@ -26,6 +26,7 @@
     "pg-hstore": "^2.3.2",
     "sequelize": "^5.8.5",
     "sequelize-cli": "^5.4.0",
+    "stripe": "^7.0.0",
     "zipcodes": "^8.0.0"
   },
   "repository": {

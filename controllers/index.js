@@ -7,12 +7,13 @@ const passport = require('passport');
 
 router.use('/', require('./home'));
 router.use('/sign-up', require('./sign-up'));
-router.use('/schedule', passport.authenticate('jwt', {session: false}), require('./schedule'));
-router.use('/all-tasks', passport.authenticate('jwt', {session: false}), require('./all-tasks'));
-router.use('/account', passport.authenticate('jwt', {session: false}), require('./account'));
-router.use('/choose', passport.authenticate('jwt', {session: false}), require('./choose'));
-router.use('/find-work', passport.authenticate('jwt', {session: false}), require('./find-work'));
-router.use('/order-history', passport.authenticate('jwt', {session: false}), require('./order-history'));
+router.use(passport.authenticate('jwt', {session: false, failureRedirect: '/'}));
+router.use('/schedule', require('./schedule'));
+router.use('/all-tasks', require('./all-tasks'));
+router.use('/account', require('./account'));
+router.use('/choose', require('./choose'));
+router.use('/find-work', require('./find-work'));
+router.use('/order-history', require('./order-history'));
 
 router.use('/debug', require('./debug'));
 

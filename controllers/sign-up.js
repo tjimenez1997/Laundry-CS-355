@@ -3,8 +3,16 @@ const models = require('../models');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.render('sign-up');
+router.get('/', (req, res, next) => {
+    passport.authenticate('jwt', {session: false}, function (err, user, info, status) {
+        if (err) {
+            return next(err);
+        }
+        if (!user) {
+            return res.render('sign-up');
+        }
+        res.redirect('/order-history');
+    })(req, res, next);
 });
 
 //Register Page POST Route

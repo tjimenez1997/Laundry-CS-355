@@ -8,8 +8,16 @@ require('../config/passport.js')(passport);
 const router = express.Router();
 
 
-router.get('/', (req, res) => {
-  res.render('home');
+router.get('/', (req, res, next) => {
+    passport.authenticate('jwt', {session: false}, function (err, user, info, status) {
+        if (err) {
+            return next(err);
+        }
+        if (!user) {
+            return res.render('home');
+        }
+        res.redirect('/order-history');
+    })(req, res, next);
 });
 
 //Protected Sign Out Get Route (You can only access if you are signed in)

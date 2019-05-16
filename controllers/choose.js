@@ -9,12 +9,10 @@ const router = express.Router();
 router.get('/', (req, res) => {
     models.Order.findAll({
         where: {
-            worker: {
-                [Op.eq]: null
-            }
+            worker: null
         }
     }).then((err, orders) => {
-        res.render('choose', orders);
+        res.render('choose', {orders});
     });
 });
 

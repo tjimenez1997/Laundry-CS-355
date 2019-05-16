@@ -8,6 +8,9 @@ module.exports = (sequelize, DataTypes) => {
   //pickuptime: Final Pickup Time
   //deliverytime: Final Delivery Time
   const Order = sequelize.define('Order', {
+    address: DataTypes.STRING,
+    washdry: DataTypes.JSONB,
+    dryclean: DataTypes.JSONB,
     pickuptime: DataTypes.TIME,
     deliverytime: DataTypes.TIME
   }, {});

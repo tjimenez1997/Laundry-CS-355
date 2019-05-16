@@ -28,7 +28,7 @@ app.set('view engine', 'handlebars');
 
 // Load up all of the controllers
 const controllers = require('./controllers');
-app.use(controllers)
+app.use(controllers);
 
 
 // First, make sure the Database tables and models are in sync

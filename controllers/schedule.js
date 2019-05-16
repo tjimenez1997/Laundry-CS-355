@@ -1,6 +1,5 @@
 const express = require('express');
 const models = require('../models');
-const passport = require('passport');
 
 const router = express.Router();
 
@@ -8,12 +7,12 @@ router.get('/', (req, res) => {
     res.render('schedule');
 });
 
-router.post('/', passport.authenticate('jwt', { session: false }), (req, res) => {
-    const {address, pickup, dropoff, washdry, dryclean} = req.body;
-    models.Order.create({status:'New', customer: req.user.email, address, pickup, dropoff, washdry, dryclean})
-        .then(()=> {
+router.post('/', (req, res) => {
+    const {address, pickuptime, deliverytime, washdry, dryclean} = req.body;
+    models.Order.create({StatusName: 'New', CustomerEmail: req.user.email, address, pickuptime, deliverytime, washdry, dryclean})
+        .then(() => {
             res.json({success: true});
         });
 });
-  
+
 module.exports = router;

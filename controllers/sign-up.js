@@ -12,7 +12,7 @@ router.post('/', (req, res) => {
   let input = req.body;
   let taskerSignup = input.taskerFirstName;
   if(taskerSignup){
-  		models.Workers.create({firstname: input.taskerFirstName, lastname: input.taskerLastName, email: input.taskerEmailAddress, phone: input.taskerPhoneNumber, password: input.taskerPassword, address: input.taskerAddress})
+  		models.Worker.create({firstname: input.taskerFirstName, lastname: input.taskerLastName, email: input.taskerEmailAddress, phone: input.taskerPhoneNumber, password: input.taskerPassword, address: input.taskerAddress})
   		.then(function(){
     		res.json({ msg: "Successfully added worker account to database." });
   		});

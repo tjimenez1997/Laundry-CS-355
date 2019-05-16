@@ -5,6 +5,11 @@ var WASHDRY = {
     LARGE: {sku:'sku_F52Egq34K8LKws', el: $('#large-size')}
 };
 
+var pickUpDate = $('#pickupdate');
+var pickUpTime = $('#pickuptime');
+var dropOffDate = $('#dropoffdate');
+var dropOffTime = $('#dropofftime');
+
 function checkout() {
     var items = [];
 
@@ -15,12 +20,19 @@ function checkout() {
         }
     }
 
+    var metadata = {
+        unique: Date.now() + window.userInfo.email,
+        address: $('#address').val(),
+        pickuptime: Date.parse(pickUpDate.val() + ' ' + pickUpTime.val()),
+        deliverytime: Date.parse(dropOffDate.val() + ' ' + dropOffTime.val())
+    };
 
     stripe.redirectToCheckout({
         items: items,
         successUrl: 'http://localhost:8000/schedule?thankyou',
         cancelUrl: 'http://localhost:8000/schedule?cancel',
-        customerEmail: window.userInfo.email
+        customerEmail: window.userInfo.email,
+        clientReferenceId: JSON.stringify(metadata)
     }).then(function (result) {
         // If `redirectToCheckout` fails due to a browser or network
         // error, display the localized error message to your customer

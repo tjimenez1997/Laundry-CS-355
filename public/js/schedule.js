@@ -18,8 +18,9 @@ function checkout() {
 
     stripe.redirectToCheckout({
         items: items,
-        successUrl: 'http://localhost:8000/success',
-        cancelUrl: 'http://localhost:8000/cancel',
+        successUrl: 'http://localhost:8000/schedule?thankyou',
+        cancelUrl: 'http://localhost:8000/schedule?cancel',
+        customerEmail: window.userInfo.email
     }).then(function (result) {
         // If `redirectToCheckout` fails due to a browser or network
         // error, display the localized error message to your customer

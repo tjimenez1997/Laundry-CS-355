@@ -212,15 +212,18 @@ label{
     border: 2px solid #4a7fe3;
     box-shadow: none;
 }
-#add-more-btn{
+.add-selection-btn:not([href]):not([tabindex]),
+.add-selection-btn{
 	color: #4a7fe3;
 	font-size: 12px;
 	cursor: pointer;
     display: block;
-    margin-top: -8px;
+/*    margin-top: -8px;*/
     margin-bottom: 1rem;		
 }
-#add-more-btn:hover{
+.add-selection-btn:not([href]):not([tabindex]):hover,
+.add-selection-btn:hover{
+	color: #4a7fe3;
 	text-decoration: underline;
 }
 .submit-btn{
@@ -394,7 +397,7 @@ label{
 	padding-top: 120px;
 }
 .schedule-form{
-	margin-top: 50px;
+	margin-top: 30px;
 }
 label.hide {display: none;}
 
@@ -404,6 +407,8 @@ label.hide {display: none;}
 .question-label{
 	font-weight: bold;
 	color: #4a7fe3;
+	margin-top: 20px;
+    display: block;	
 }
 #schedule-container .custom-select{
 	height: auto;
@@ -412,9 +417,7 @@ label.hide {display: none;}
 	margin-top: 10px;
 	margin-bottom: 0;
 }
-.form-control{
-	margin-bottom: 40px;
-}
+
 .schedule-btn{
 	width: 120px;
     margin-top: 30px;
@@ -426,7 +429,7 @@ label.hide {display: none;}
 	margin-bottom: 40px;
 }*/
 #washdry-service{
-	padding-top: 50px;
+	padding-top: 40px;
 	position: relative;
 }
 #back-to-schedule-time{
@@ -434,26 +437,35 @@ label.hide {display: none;}
     top: 0px;
     left: 0;
 }
-.washDrySelections{
+#washDrySelections{
 	margin-bottom: 40px;	
 }
-.washDrySelections .row{
+#dryCleanSelections .row,
+#washDrySelections .row{
 	margin-bottom: 10px;	
 }
-.washDrySelections .row:first-child{
+#washDrySelections .row:first-child{
 	margin-bottom: 0;	
 }
-.washDrySelections .col-title{
+#washDrySelections .col-title{
 	margin-top: 10px;
     display: block;
 }
-.dryCleanSelections .col-title{
+#dryCleanSelections .col-title{
 	margin-top: 10px;
     display: block;
 }
 #washDryLabels{
 	margin-bottom: 0;
 }
+#submit-btn-container,
+/*#washDryDropOffContainer,
+#dryCleanDropOffContainer,*/
+#washDrySelections,
+#dryCleanSelections{
+	display: none;
+}
+
 /*-------------- star rating -----------------*/
 .jq-stars {
   display: inline-block;
@@ -484,7 +496,6 @@ label.hide {display: none;}
 }
 
 .jq-star-svg path {
-  /* stroke: #000; */
   stroke-linejoin: round;
 }
 

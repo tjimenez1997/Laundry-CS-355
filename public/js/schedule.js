@@ -1,14 +1,16 @@
 var stripe = Stripe('pk_test_sTVQBOT4YAcQUzM5JRZU4urJ00OuHksBLO');
 var WASHDRY = {
     SMALL: {sku: 'sku_F52EIL87Rolnuo', el: $('#small-size')},
-    MEDIUM: {sku:'sku_F51b2eo6RGP8YD', el: $('#med-size')},
+    MEDIUM: {sku:'sku_F51b2eo6RGP8YD', el: $('#medium-size')},
     LARGE: {sku:'sku_F52Egq34K8LKws', el: $('#large-size')}
 };
 
-var pickUpDate = $('#pickupdate');
-var pickUpTime = $('#pickuptime');
-var dropOffDate = $('#dropoffdate');
-var dropOffTime = $('#dropofftime');
+var pickUpDate = $('#pickupDate');
+var pickUpTime = $('#pickupTime');
+var washDryDropOffDate = $('#washDryDropoffDate');
+var washDryDropOffTime = $('#washDryDropoffTime');
+var dryCleanDropoffDate = $('#dryCleanDropoffDate');
+var dryCleanDropoffTime = $('#dryCleanDropoffTime');
 
 function checkout() {
     var items = [];
@@ -24,7 +26,8 @@ function checkout() {
         unique: Date.now() + window.userInfo.email,
         address: $('#address').val(),
         pickuptime: Date.parse(pickUpDate.val() + ' ' + pickUpTime.val()),
-        deliverytime: Date.parse(dropOffDate.val() + ' ' + dropOffTime.val())
+        washdrydeliverytime: Date.parse(washDryDropOffDate.val() + ' ' + washDryDropOffTime.val()),
+        drycleandeliverytime: Date.parse(dryCleanDropoffDate.val() + ' ' + dryCleanDropoffTime.val())
     };
 
     stripe.redirectToCheckout({

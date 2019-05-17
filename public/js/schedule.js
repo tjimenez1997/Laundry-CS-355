@@ -32,7 +32,7 @@ function checkout() {
 
     stripe.redirectToCheckout({
         items: items,
-        successUrl: 'http://localhost:8000/schedule?thankyou',
+        successUrl: 'http://localhost:8000/thank-you',
         cancelUrl: 'http://localhost:8000/schedule?cancel',
         customerEmail: window.userInfo.email,
         clientReferenceId: JSON.stringify(metadata)

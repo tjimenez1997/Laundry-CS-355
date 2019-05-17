@@ -134,7 +134,7 @@ $(document).ready(function(){
 		    }
 		  }
 		}
-	}
+	});
 
 	// star-rating
 	$(".id-1").starRating({

@@ -421,6 +421,7 @@ label.hide {display: none;}
 .schedule-btn{
 	width: 120px;
     margin-top: 30px;
+    padding: 5px 15px;
 }
 .form-check{
 	margin-top: 10px;
@@ -459,11 +460,23 @@ label.hide {display: none;}
 	margin-bottom: 0;
 }
 #submit-btn-container,
-/*#washDryDropOffContainer,
-#dryCleanDropOffContainer,*/
+#washDryDropOffContainer,
+#dryCleanDropOffContainer,
 #washDrySelections,
 #dryCleanSelections{
 	display: none;
+}
+/*-------------- schedule-----------------*/
+#thank-you-section{
+	margin-top: 120px;
+}
+#thank-you-section .view-history-btn{
+	display: inline-block;
+	margin-top: 30px;
+	padding: 5px 15px;
+}
+#thank-you-section .view-history-btn:hover{
+	text-decoration: none;
 }
 
 /*-------------- star rating -----------------*/

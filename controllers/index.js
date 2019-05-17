@@ -9,6 +9,7 @@ router.use('/', require('./home'));
 router.use('/sign-up', require('./sign-up'));
 router.use(passport.authenticate('jwt', {session: false, failureRedirect: '/'}));
 router.use('/schedule', require('./schedule'));
+router.use('/thank-you', require('./thank-you'));
 router.use('/all-tasks', require('./all-tasks'));
 router.use('/account', require('./account'));
 router.use('/choose', require('./choose'));

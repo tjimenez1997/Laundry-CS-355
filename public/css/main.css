@@ -388,9 +388,108 @@ label{
 	width: 25%;
     text-align: center;
 }
+
 /*-------------- schedule-----------------*/
+#schedule-page{
+	padding-top: 120px;
+}
+.schedule-form{
+	margin-top: 50px;
+}
 label.hide {display: none;}
 
 #nextpageContainer{
-	padding: 100px 15vw;
+	padding: 0 15vw;
+}
+.question-label{
+	font-weight: bold;
+	color: #4a7fe3;
+}
+#schedule-container .custom-select{
+	height: auto;
+}
+.nested-label{
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+.form-control{
+	margin-bottom: 40px;
+}
+.schedule-btn{
+	width: 120px;
+    margin-top: 30px;
+}
+.form-check{
+	margin-top: 10px;
+}
+/*#schedule-page input{
+	margin-bottom: 40px;
+}*/
+#washdry-service{
+	padding-top: 50px;
+	position: relative;
+}
+#back-to-schedule-time{
+	position: absolute;
+    top: 0px;
+    left: 0;
+}
+.washDrySelections{
+	margin-bottom: 40px;	
+}
+.washDrySelections .row{
+	margin-bottom: 10px;	
+}
+.washDrySelections .row:first-child{
+	margin-bottom: 0;	
+}
+.washDrySelections .col-title{
+	margin-top: 10px;
+    display: block;
+}
+.dryCleanSelections .col-title{
+	margin-top: 10px;
+    display: block;
+}
+#washDryLabels{
+	margin-bottom: 0;
+}
+/*-------------- star rating -----------------*/
+.jq-stars {
+  display: inline-block;
+}
+
+.jq-rating-label {
+  font-size: 22px;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  font-family: helvetica, arial, verdana;
+}
+
+.jq-star {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.jq-star-svg {
+  padding-left: 3px;
+  width: 100%;
+  height: 100% ;
+}
+
+.jq-star:hover .fs-star-svg path {
+}
+
+.jq-star-svg path {
+  /* stroke: #000; */
+  stroke-linejoin: round;
+}
+
+/* un-used */
+.jq-shadow {
+  -webkit-filter: drop-shadow( -2px -2px 2px #888 );
+  filter: drop-shadow( -2px -2px 2px #888 );
 }

@@ -51,14 +51,38 @@ $(document).ready(function(){
 		$('#schedule-container').hide();
 		$('#washdry-service').show();
 	});
+	$('#back-to-schedule-time').click(function(){
+		$('#washdry-service').hide();
+		$('#schedule-container').show();
+	});	
 
 	//add more clothing category button
 	$('#add-category-btn').click(function(){   
 		$('#additional-category').append(' <div class ="col-sm-4 col-4"> <select class="custom-select custom-select-sm" id="cloth" name="cloth"> <option selected value="jacket" for ="num-item1">Jacket</option> <option selected value="sweater"for ="num-item2">Sweater</option> </select> </div> <div class ="col-sm-4 col-4"> <select class="form-control" id="num-item1"> <option value="0">0</option> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5</option> <option value="6">6</option> <option value="7">7</option> <option value="8">8</option> <option value="9">9</option> </select> </div> <div class ="col-sm-4 col-4"> <p id="outputitem1"></p> </div>');
 	});
 
+	//show and hide dropoff time
+	$('#washDryDropOffContainer').hide();
+	$('#dryCleanDropOffContainer').hide();	
+	$('.schedule-form input').on('click',function () {
+        if($('.schedule-form #washDryBox').is(':checked')) {
+            $('#washDryDropOffContainer').show();
+        }
+        else{
+            $('#washDryDropOffContainer').hide();
+        }
+        if($('.schedule-form #dropOffBox').is(':checked')) {
+            $('#dryCleanDropOffContainer').show();
+        }
+        else{
+            $('#dryCleanDropOffContainer').hide();
+        }
+    });
+
 	// date picker
-    $( "#datepicker,#pickupdate,#dropoffdate" ).datepicker();
+    $("#datepicker,#pickupDate,#washDryDropoffDate,#dryCleanDropoffDate" ).datepicker();
+
+
 
 	// total price of wash dry
 	$("#large-size").change(function(){

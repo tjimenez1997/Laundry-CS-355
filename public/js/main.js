@@ -134,6 +134,38 @@ $(document).ready(function(){
 		    }
 		  }
 		}
+	}
+
+	// star-rating
+	$(".id-1").starRating({
+		initialRating: 0,
+		strokeColor: '#894A00',
+		strokeWidth: 10,
+		starSize: 25
+	});
+	$(".id-2").starRating({
+		initialRating: 0,
+		strokeColor: '#894A00',
+		strokeWidth: 10,
+		starSize: 25
+	});
+	$(".id-3").starRating({
+		initialRating: 0,
+		strokeColor: '#894A00',
+		strokeWidth: 10,
+		starSize: 25
+	});
+	$(".id-4").starRating({
+		initialRating: 0,
+		strokeColor: '#894A00',
+		strokeWidth: 10,
+		starSize: 25
 	});
 
+	$(".my-rating-8").starRating({
+		readOnly: true,
+		strokeWidth: 10,
+		starSize: 25
+	});
+	
 });

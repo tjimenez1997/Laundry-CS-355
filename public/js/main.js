@@ -25,6 +25,18 @@ $(document).ready(function(){
 	        form.classList.add('was-validated');
 	      }, false);
 	    });
+		}, false);
+		window.addEventListener('load', function() {
+	    var forms = $('.needs-validation');
+	    var validation = Array.prototype.filter.call(forms, function(form) {
+	      form.addEventListener('submit', function(event) {
+	        if (form.checkValidity() === false) {
+	          event.preventDefault();
+	          event.stopPropagation();
+	        }
+	        form.classList.add('was-validated');
+	      }, false);
+	    });
   	}, false);
 
   	//add more available button
@@ -137,32 +149,70 @@ $(document).ready(function(){
 	});
 
 	// star-rating
-	$(".id-1").starRating({
+	$(".taskerRating-1").starRating({
 		initialRating: 0,
 		strokeColor: '#894A00',
 		strokeWidth: 10,
 		starSize: 25
 	});
-	$(".id-2").starRating({
+	$(".taskerRating-2").starRating({
 		initialRating: 0,
 		strokeColor: '#894A00',
 		strokeWidth: 10,
 		starSize: 25
 	});
-	$(".id-3").starRating({
+	$(".taskerRating-3").starRating({
+		initialRating: 4,
+		strokeColor: '#894A00',
+		strokeWidth: 10,
+		starSize: 25
+	});
+	$(".taskerRating-4").starRating({
+		initialRating: 4.5,
+		strokeColor: '#894A00',
+		strokeWidth: 10,
+		starSize: 25
+	});
+	$(".customerRating-1").starRating({
 		initialRating: 0,
 		strokeColor: '#894A00',
 		strokeWidth: 10,
 		starSize: 25
 	});
-	$(".id-4").starRating({
+	$(".customerRating-2").starRating({
+		initialRating: 0,
+		strokeColor: '#894A00',
+		strokeWidth: 10,
+		starSize: 25
+	});
+	$(".customerRating-3").starRating({
+		initialRating: 0,
+		strokeColor: '#894A00',
+		strokeWidth: 10,
+		starSize: 25
+	});
+	$(".customerRating-4").starRating({
+		initialRating: 0,
+		strokeColor: '#894A00',
+		strokeWidth: 10,
+		starSize: 25
+	});
+	$(".customerRating-5").starRating({
+		initialRating: 0,
+		strokeColor: '#894A00',
+		strokeWidth: 10,
+		starSize: 25
+	});
+	$(".orderDetailTaskerRating-1").starRating({
 		initialRating: 0,
 		strokeColor: '#894A00',
 		strokeWidth: 10,
 		starSize: 25
 	});
 
-	$(".my-rating-8").starRating({
+
+	$(".myRating-1").starRating({
+		initialRating: 4.5,
 		readOnly: true,
 		strokeWidth: 10,
 		starSize: 25

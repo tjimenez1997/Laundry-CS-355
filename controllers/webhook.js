@@ -67,8 +67,6 @@ function handleCheckoutSession(session) {
         order[drycleandeliverytime] = new Date(drycleandeliverytime);
     }
 
-
-
     session.display_items.forEach(function (item) {
         const sku = SKUS[item.sku.id];
 

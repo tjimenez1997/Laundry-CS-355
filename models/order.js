@@ -12,7 +12,8 @@ module.exports = (sequelize, DataTypes) => {
     washdry: DataTypes.JSONB,
     dryclean: DataTypes.JSONB,
     pickuptime: DataTypes.DATE,
-    deliverytime: DataTypes.DATE
+    washdrydeliverytime: DataTypes.DATE,
+    drycleandeliverytime: DataTypes.DATE
   }, {});
   Order.associate = function(models) {
     Order.belongsTo(models.Customer);

@@ -32,8 +32,8 @@ function checkout() {
 
     stripe.redirectToCheckout({
         items: items,
-        successUrl: '/thank-you',
-        cancelUrl: '/schedule',
+        successUrl: window.location.origin + '/thank-you',
+        cancelUrl: window.location.origin + '/schedule',
         customerEmail: window.userInfo.email,
         clientReferenceId: JSON.stringify(metadata)
     }).then(function (result) {

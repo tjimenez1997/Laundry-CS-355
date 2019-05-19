@@ -70,7 +70,7 @@ function handleCheckoutSession(session) {
 
 
     session.display_items.forEach(function (item) {
-        const sku = sku[item.sku.id];
+        const sku = SKUS[item.sku.id];
 
         if (sku.type === 'Wash & Dry') {
             order['washdry'] = {

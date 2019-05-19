@@ -7,7 +7,6 @@ const passport = require('passport');
 
 router.use('/', require('./home'));
 router.use('/sign-up', require('./sign-up'));
-router.use('/webhook', require('./webhook'));
 router.use(passport.authenticate('jwt', {session: false, failureRedirect: '/'}));
 router.use('/schedule', require('./schedule'));
 router.use('/thank-you', require('./thank-you'));

@@ -8,16 +8,16 @@ const endpointSecret = 'whsec_cpWiiVywFKXMN3KfR4nFVzws1Kc1dLst';
 
 const router = express.Router();
 
-router.post('/', function (req, res, next) {
-    // const sig = req.headers['stripe-signature'];
-    //
-    // let event;
-    //
-    // try {
-    //     event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);
-    // } catch (err) {
-    //     return res.status(400).send(`Webhook Error: ${err.message}`);
-    // }
+router.post('/', bodyParser.raw({type: 'application/json'}), function (req, res, next) {
+    const sig = req.headers['stripe-signature'];
+
+    let event;
+
+    try {
+        event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);
+    } catch (err) {
+        return res.status(400).send(`Webhook Error: ${err.message}`);
+    }
 
     // Handle the checkout.session.completed event
     if (event.type === 'checkout.session.completed') {

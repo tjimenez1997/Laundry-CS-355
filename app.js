@@ -52,32 +52,32 @@ models.sequelize.sync({force: false})
 
         //NOTE: CustomerEmail field must be a valid signed up user or there will be a foreign key constraint error.
 
-        // models.Order.create({
-        //     StatusName: 'New',
-        //     CustomerEmail: 'a@a.com',
-        //     address: '770 Michigan Avenue, Gibsonia, PA 15044',
-        //     pickuptime: '2019-05-25T13:00:00.000Z',
-        //     washdry: {Large: {quantity: 4}},
-        //     updatedAt: '2019-05-19T21:41:07.853Z',
-        //     createdAt: '2019-05-19T21:41:07.853Z',
-        //     dryclean: null,
-        //     washdrydeliverytime: '2019-05-26T13:00:00.000Z',
-        //     drycleandeliverytime: null,
-        //     WorkerEmail: null
-        // });
-        // models.Order.create({
-        //     StatusName: 'In Progress',
-        //     CustomerEmail: 'a@a.com',
-        //     address: '770 Michigan Avenue, Gibsonia, PA 15044',
-        //     pickuptime: '2019-05-25T13:00:00.000Z',
-        //     washdry: {Small: {quantity: 1}},
-        //     updatedAt: '2019-05-19T21:41:07.853Z',
-        //     createdAt: '2019-05-19T21:41:07.853Z',
-        //     dryclean: null,
-        //     washdrydeliverytime: '2019-05-26T13:00:00.000Z',
-        //     drycleandeliverytime: null,
-        //     WorkerEmail: null
-        // });
+         models.Order.create({
+             StatusName: 'New',
+             CustomerEmail: 'thomasjimenez1997@gmail.com',
+             address: '770 Michigan Avenue, Gibsonia, PA 15044',
+             pickuptime: '2019-05-25T13:00:00.000Z',
+             washdry: {Large: {quantity: 4}},
+             updatedAt: '2019-05-19T21:41:07.853Z',
+             createdAt: '2019-05-19T21:41:07.853Z',
+             dryclean: null,
+             washdrydeliverytime: '2019-05-26T13:00:00.000Z',
+             drycleandeliverytime: null,
+             WorkerEmail: null
+         });
+         models.Order.create({
+             StatusName: 'In Progress',
+             CustomerEmail: "testcustomer@gmail.com",
+             address: '770 Michigan Avenue, Gibsonia, PA 15044',
+             pickuptime: '2019-05-25T13:00:00.000Z',
+             washdry: {Small: {quantity: 1}},
+             updatedAt: '2019-05-19T21:41:07.853Z',
+             createdAt: '2019-05-19T21:41:07.853Z',
+             dryclean: null,
+             washdrydeliverytime: '2019-05-26T13:00:00.000Z',
+             drycleandeliverytime: null,
+             WorkerEmail: null
+         });
 
         app.listen(PORT, () => {
             console.log(`Server is up and running on port: ${PORT}`)

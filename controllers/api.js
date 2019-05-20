@@ -12,12 +12,15 @@ router.get('/orders', passport.authenticate('jwt', { session: false }),
         models.Order.findAll({
 	        where: {
 	            CustomerEmail: req.user.email
-	        }
+	        },
+            attributes: ['washdry','dryclean','pickuptime','StatusName','drycleandeliverytime','washdrydeliverytime']
     	}).then(function (orders, err) {
-	    	res.json(orders);
+            //console.log(orders);
+	    	//let orderData = JSON.parse(JSON.stringify({pickuptime: orders.pickuptime}));
+            res.json(orders);
    		 });
     }
 )
-  
+
   
 module.exports = router;

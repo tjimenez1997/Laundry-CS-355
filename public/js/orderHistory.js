@@ -1,3 +1,14 @@
+/* 
+Necessary data: 
+Tasker Name
+Pickup Time
+Phone Number
+Order Status
+Pickup 
+Drop Off
+Status
+*/
+
 fetch('/api/orders')
   .then(
     function(response) {
@@ -15,4 +26,4 @@ fetch('/api/orders')
   )
   .catch(function(err) {
      console.log('Fetch Error :-S', err);
-  });
+});

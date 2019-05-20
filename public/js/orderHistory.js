@@ -1,12 +1,11 @@
 /* 
 Necessary data: 
-Tasker Name
-Pickup Time
-Phone Number
-Order Status
-Pickup 
-Drop Off
-Status
+Tasker Name (Via FindOne Workers)
+Phone Number (Via FindOne Workers)
+Load Type (In Orders "washdry"/"dryclean")
+Pickup Time (In Orders "pickeduptime")
+Order Status (In Orders "StatusName")
+Drop Off (In Orders "drycleandeliverytime"/"washdrydeliverytime")
 */
 
 fetch('/api/orders')

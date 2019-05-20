@@ -6,6 +6,7 @@ const passport = require('passport');
 //Example / refers to home.js
 
 router.use('/', require('./home'));
+router.use('/api', require('./api'));
 router.use('/sign-up', require('./sign-up'));
 router.use(passport.authenticate('jwt', {session: false, failureRedirect: '/'}));
 router.use('/schedule', require('./schedule'));

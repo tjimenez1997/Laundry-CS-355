@@ -58,7 +58,7 @@ router.post('/', (req, res) => {
                   return res.redirect('back');
               }
               customer.comparePassword(req.body.userPassword, (err, isMatch) => {
-                  console.log("Password: "+req.body.userPassword + "Matched Password: "+isMatch);
+                  //console.log("Password: "+req.body.userPassword + "Matched Password: "+isMatch);
                   let pk = 'MIIBOAIBAAJAVPfYwkIYRZ6CUtRQFefcPD9p9GXn8e/capeB6RWkZtE0HTJpAms/Fa6TC8sUIYfC+hlD5Le1ORiL9VPKtydk0wIDAQABAkBU8OB0cnapQmiuPSlCfOOiJxLZC/bv2gXTWVq5lLUhQuOIXEqeQcxcTdNru0ki9C/tRmhcnaT5hlbr/7WDM2EhAiEAl0u3dpB+Y+QK8jp7iGlFPYA2COV0v9n8twfdv2ufBEUCIQCPxTYqF7lkjkStrMH7ysak6uG5PhnckgB+WFvDuwgyNwIgFjONM3/WnC/tj0gXspfIClNTGpEZRcHmPLGRz7IqPoUCIDvIkgFm5BzAXCasE+4UIA4r7bkN7csemz3umBoICBx5AiBzB9RHgQCGx4C4S3eaGI6dmor/A1j/Q4fsHkPs3KSCHQ==';
                   if(isMatch && !err) {
                         var token = jwt.sign(JSON.parse(JSON.stringify({firstname:customer.firstname, lastname:customer.lastname, email:customer.email, phone:customer.phone, address: customer.address})), pk, {expiresIn: 86400 * 30});
@@ -86,7 +86,6 @@ router.post('/', (req, res) => {
                   return res.status(401).send({message: 'Authentication failed. User not found.'});
               }
               workers.comparePassword(req.body.userPassword, (err, isMatch) => {
-                  console.log("Password: "+req.body.userPassword + "Matched Password: "+isMatch);
                   let pk = 'MIIBOAIBAAJAVPfYwkIYRZ6CUtRQFefcPD9p9GXn8e/capeB6RWkZtE0HTJpAms/Fa6TC8sUIYfC+hlD5Le1ORiL9VPKtydk0wIDAQABAkBU8OB0cnapQmiuPSlCfOOiJxLZC/bv2gXTWVq5lLUhQuOIXEqeQcxcTdNru0ki9C/tRmhcnaT5hlbr/7WDM2EhAiEAl0u3dpB+Y+QK8jp7iGlFPYA2COV0v9n8twfdv2ufBEUCIQCPxTYqF7lkjkStrMH7ysak6uG5PhnckgB+WFvDuwgyNwIgFjONM3/WnC/tj0gXspfIClNTGpEZRcHmPLGRz7IqPoUCIDvIkgFm5BzAXCasE+4UIA4r7bkN7csemz3umBoICBx5AiBzB9RHgQCGx4C4S3eaGI6dmor/A1j/Q4fsHkPs3KSCHQ==';
                   if(isMatch && !err) {
                         var token = jwt.sign(JSON.parse(JSON.stringify({firstname:workers.firstname, lastname:workers.lastname, email:workers.email, phone:workers.phone, address: workers.address})), pk, {expiresIn: 86400 * 30});
@@ -94,9 +93,12 @@ router.post('/', (req, res) => {
                         //Store jwt with client side cookie
                         //Redirect to debug for now (should be changed to first customer route later)
                         res.cookie('authToken',token);
-                        res.redirect('/debug');
+                        res.redirect('schedule');
                   } else {
-                    res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
+                    //res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
+                     let errorCode = 1;
+                     res.cookie('warningMessage',errorCode, {maxAge: 3000});
+                    return  res.redirect('back');                  
                   }
                 })
               }).catch((error) => res.status(400).send(error));

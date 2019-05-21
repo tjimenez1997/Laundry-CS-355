@@ -41,6 +41,14 @@
     </h2>
 
     <div class="row align-content-center">
+
+        <div class="col-lg-6 col-sm-6 col-6">
+        <label for="accountstatus" class="question-label h4">
+          Account Status
+        </label>
+          <p> {{#if user.customer}}Customer {{#else}} Tasker {{/if}} </p>
+      </div>
+
       <div class="col-lg-6 col-sm-6 col-6">
         <label for="name" class="question-label h4">
           Name

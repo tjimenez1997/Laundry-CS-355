@@ -55,6 +55,7 @@ function handleCheckoutSession(session) {
     const order = {
         StatusName: 'New',
         CustomerEmail: session.customer_email,
+        WorkerEmail: null,
         address,
         pickuptime: new Date(pickuptime)
     };

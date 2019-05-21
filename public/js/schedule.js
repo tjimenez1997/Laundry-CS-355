@@ -36,8 +36,9 @@ function checkout() {
     var categories = $('select[name=dryCleanCategories]');
     var nums = $('select[name=dryCleanNum]');
 
+
     for (var i = 0; i < categories.length; i++) {
-        if ($(nums[i]).val() !== '0') {
+        if ($(nums[i]).val() !== '0' && $(nums[i]).val() !== '') {
             items.push({sku: DRYCLEAN[$(categories[i]).val()], quantity: Number.parseInt($(nums[i]).val())})
         }
     }

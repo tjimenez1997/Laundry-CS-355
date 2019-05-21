@@ -90,10 +90,10 @@
 
     <h2 class="h3 content-title">
       Payment Method
-          <a class="btn btn-primary a-btn-slide-text" data-target=".edit-modal">
-            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-            <span><strong> + </strong></span>            
-          </a>
+      <a class="btn btn-primary a-btn-slide-text" data-toggle="modal" data-target=".payment-modal">
+        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+        <span><strong><p> + </p></strong></span>            
+      </a>
     </h2>
     <div class="row" id="payment-method-container">
 
@@ -131,37 +131,101 @@
 
           <div class= "modal-body">
             <div class="container-fluid">
-              <h5 class="modal-subtitle">Name</h5>
               <div class="row">
+
+                <h5 class="modal-subtitle">Name</h5>
                 input new name
               </div>
-              <h5 class="modal-subtitle">Email</h5>
-              <div class="row">
-                input new email
 
-              </div>
-              <h5 class="modal-subtitle">Phone Number</h5>
               <div class="row">
+                <h5 class="modal-subtitle">Email</h5>
+                input new email
+              </div>
+
+              <div class="row">
+                <h5 class="modal-subtitle">Phone Number</h5>
                 input new phone number
               </div>
-              <h5 class="modal-subtitle">Address</h5>
+
               <div class="row">
+                <h5 class="modal-subtitle">Address</h5>
                 input new address
               </div>
-              <h5 class="modal-subtitle">Password</h5>
+
               <div class="row">
+                <h5 class="modal-subtitle">Password</h5>
                 input new password
               </div>
               will need to confirm password to save changes
             </div>
           </div>
-
         </div>
       </div>
     </div>
 
+    <div class="modal fade payment-modal" tabindex="-1" role="dialog" aria-labelledby="addPayment" aria-hidden="true">
+      <div class= "modal-dialog modal-lg">
+        <div class= "modal-content">
+          <div class= "modal-header">
+            <h4 class="modal-title">Add Payment Method</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="close-btn"></span>
+            </button>
+          </div>
 
+          <div class= "modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <h5 class="modal-subtitle">Credit Card Information</h5>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                  Card # info box
+                </div>
+              </div>
 
+              <div class="row">
+                <h5 class="modal-subtitle">MM/YYYY</h5>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                  MM Text Box
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                  YYYY Text Box
+                </div>
+              </div>
+
+              <div class="row">
+                <h5 class="modal-subtitle">CVV</h5>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                  CVV text box
+                </div>
+              </div>
+
+              <div class="row">
+                <h5 class="modal-subtitle">Zip Code</h5>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                  Zip Code Text Box
+                </div>
+              </div>
+
+              <div class="row">
+                <h5 class="modal-subtitle">Name on the Card</h5>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                  name text box
+                </div>
+              </div>
+
+              <div class="row">
+                <h5 class="modal-subtitle">Password</h5>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                  Input password to confirm
+                </div>
+              </div>
+              will need to confirm password to save changes
+              and add submit button
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 </section>

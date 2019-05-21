@@ -6,7 +6,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     models.Order.findAll({
         where: {
-            worker: null
+            WorkerEmail: null
         }
     }).then((err, orders) => {
         res.render('find-work', {orders});

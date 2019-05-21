@@ -5,6 +5,17 @@ var WASHDRY = {
     LARGE: {sku:'sku_F52Egq34K8LKws', el: $('#large-size')}
 };
 
+var DRYCLEAN = {
+    Skirt: 'sku_F6r6kYmM66fnhk',
+    Pants: 'sku_F6r6SVjWR9Dr35',
+    Blanket: 'sku_F6r6rP7Fycqvyg',
+    Dress: 'sku_F6r4paBJiphP50',
+    Suit: 'sku_F6r38v1i64Foe6',
+    Coat: 'sku_F6r30XhPECezYL',
+    Sweater: 'sku_F6r3ThfDzQc0DJ',
+    Jacket: 'sku_F51VTXGCfrWj7c'
+};
+
 var pickUpDate = $('#pickupDate');
 var pickUpTime = $('#pickupTime');
 var washDryDropOffDate = $('#washDryDropoffDate');
@@ -18,7 +29,16 @@ function checkout() {
     for (var key in WASHDRY) {
         var load = WASHDRY[key];
         if (load.el.val() !== '0') {
-            items.push({sku: load.sku, quantity: Number.parseInt(load.el.val())})
+            items.push({sku: load.sku, quantity: Number.parseInt(load.el.val())});
+        }
+    }
+
+    var categories = $('select[name=dryCleanCategories]');
+    var nums = $('select[name=dryCleanNum]');
+
+    for (var i = 0; i < categories.length; i++) {
+        if ($(nums[i]).val() !== '0') {
+            items.push({sku: DRYCLEAN[$(categories[i]).val()], quantity: Number.parseInt($(nums[i]).val())})
         }
     }
 

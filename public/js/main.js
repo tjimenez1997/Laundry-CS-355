@@ -106,7 +106,21 @@ $(document).ready(function(){
 
 	//add more clothing category button
 	$('#add-category-btn').click(function(){   
-		$('#additional-category').append('<div class="row"><div class="col-4 col-sm-4"><select class="custom-select custom-select-sm"id=dryWashCategory1 name=categories><option value=Jacket selected>Do not select<option value=Sweater>Sweater<option value=Coat>Coat<option value=Suit>Suit<option value=Dress>Dress<option value=Blanket>Blanket<option value=Pants>Pants<option value=Skirt>Skirt</select></div><div class="col-4 col-sm-4"><select class="custom-select custom-select-sm"id=dryWashNum1><option value=0>0<option value=1>1<option value=2>2<option value=3>3<option value=4>4<option value=5>5<option value=6>6<option value=7>7<option value=8>8<option value=9>9</select></div><div class="col-4 col-sm-4"><span id=dryWashTotal1>$ 0</span></div></div>');
+		$('#additional-category').append('<div class="row"> <div class="col-sm-4 col-4"> <select class="custom-select custom-select-sm" id="dryWashCategory1" name="dryCleanCategories"> <option selected value=""></option> <option value="Jacket">Jacket</option> <option value="Sweater">Sweater</option> <option value="Coat">Coat</option> <option value="Suit">Suit</option> <option value="Dress">Dress</option> <option value="Blanket">Blanket</option> <option value="Pants">Pants</option> <option value="Skirt">Skirt</option> </select> </div> <div class ="col-sm-4 col-4"> <select class="custom-select custom-select-sm" id="dryWashNum1" name="dryCleanNum"> <option selected value=""></option> <option value="0">0</option> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5</option> <option value="6">6</option> <option value="7">7</option> <option value="8">8</option> <option value="9">9</option> </select> </div> <div class="col-sm-4 col-4"> <span id="dryWashTotal1">$ 0</span> </div> </div>');
+		$("#additional-category .row").each(function (index, value) {
+			var el = $(value);
+			el.find("#dryWashNum1,#dryWashCategory1").change(function(){
+				let selectedItem = el.find("#dryWashCategory1 option:selected").text();
+				let itemNum = el.find("#dryWashNum1 option:selected").text();
+				for (let property in pricing){
+					if (pricing.hasOwnProperty(property)) {
+						if(selectedItem == property){
+							el.find("#dryWashTotal1").text('$ ' + pricing[selectedItem].price * itemNum).fadeIn();
+						}
+					}
+				}
+			});
+		});
 	});
 	
 	// total price of dry clean

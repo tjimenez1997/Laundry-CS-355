@@ -5,13 +5,16 @@ const passport = require('passport');
 //This allows you to create seperate route.js pages for each page.
 //Example / refers to home.js
 
+router.use(function (req, res, next) {
+    res.locals.path = req.path;
+    next();
+});
 router.use('/', require('./home'));
 router.use('/api', require('./api'));
 router.use('/sign-up', require('./sign-up'));
 router.use(passport.authenticate('jwt', {session: false, failureRedirect: '/'}));
 router.use(function (req, res, next) {
     res.locals.user = req.user;
-    res.locals.path = req.path;
     next();
 });
 router.use('/schedule', require('./schedule'));

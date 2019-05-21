@@ -33,6 +33,17 @@ router.get('/', (req, res) => {
         res.render('find-work', {orders: arr});
     });
 });
-  
-  
+
+router.post('/', function (req, res) {
+    var id = req.body.id;
+    models.Order.update({WorkerEmail: req.user.email, StatusName: 'In Progress'}, {
+        where: {
+            id
+        }
+    }).then(function () {
+        res.send('OK');
+    });
+});
+
+
 module.exports = router;

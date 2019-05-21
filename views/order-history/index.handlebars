@@ -22,50 +22,30 @@
             </div>
         {{/each}}
 
-        <h2 class="h3 content-title">In Progress (2)</h2>
-        <div class="row entry-row">
-            <div class="col-lg-2 col-sm-6 col-6">
-                <span class="col-title">Tasker</span>
-                <p>Brenda Walker</p>
+        <h2 class="h3 content-title">In Progress ({{InProgress.length}})</h2>
+        {{#each InProgress}}
+            <div class="row entry-row">
+                <div class="col-lg-2 col-sm-6 col-6">
+                    <span class="col-title">Tasker</span>
+                    <p>{{this.Worker.firstname}} {{this.Worker.lastname}}</p>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6">
+                    <span class="col-title">Services</span>
+                    <span>{{this.serviceText}}</span>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6">
+                    <span class="col-title">Pickup</span>
+                    <span>{{this.pickuptime}}</span>
+                </div>
+                <div class="col-lg-2 col-sm-6 col-6">
+                    <span class="col-title">Rate the Tasker</span>
+                    <div class="taskerRating-1"></div>
+                </div>
+                <div class="col-lg-2 col-sm-12 col-12 d-flex justify-content-lg-end justify-content-start align-items-center">
+                    <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
+                </div>
             </div>
-            <div class="col-lg-3 col-sm-6 col-6">
-                <span class="col-title">Services</span>
-                <span>Wash & Dry</span>
-            </div>
-            <div class="col-lg-3 col-sm-6 col-6">
-                <span class="col-title">Pickup</span>
-                <span>3:00 PM, 5/5/2019</span>
-            </div>
-            <div class="col-lg-2 col-sm-6 col-6">
-                <span class="col-title">Rate the Tasker</span>
-                <div class="taskerRating-1"></div>
-            </div>
-            <div class="col-lg-2 col-sm-12 col-12 d-flex justify-content-lg-end justify-content-start align-items-center">
-                <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
-            </div>
-        </div>
-
-        <div class="row entry-row">
-            <div class="col-lg-2 col-sm-6 col-6">
-                <span class="col-title">Tasker</span>
-                <p>Brenda Walker</p>
-            </div>
-            <div class="col-lg-3 col-sm-6 col-6">
-                <span class="col-title">Services</span>
-                <span>Wash & Dry</span>
-            </div>
-            <div class="col-lg-3 col-sm-6 col-6">
-                <span class="col-title">Pickup</span>
-                <span>3:00 PM, 5/5/2019</span>
-            </div>
-            <div class="col-lg-2 col-sm-6 col-6">
-                <span class="col-title">Rate the Tasker</span>
-                <div class="taskerRating-2"></div>
-            </div>
-            <div class="col-lg-2 col-sm-12 col-12 d-flex justify-content-lg-end justify-content-start align-items-center">
-                <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
-            </div>
-        </div>
+        {{/each}}
 
         <h2 class="h3 content-title">Completed (2)</h2>
         <div class="row entry-row">

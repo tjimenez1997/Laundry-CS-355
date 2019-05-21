@@ -35,6 +35,7 @@ router.get('/', function(req, res) {
 				}
 			}
 
+			console.log(order.StatusName);
 			arrs[order.StatusName.replace(' ', '')].push(order);
 		});
 

@@ -231,5 +231,10 @@ $(document).ready(function(){
 		strokeWidth: 10,
 		starSize: 25
 	});
-	
 });
+
+function acceptWork(id) {
+	$.post('/find-work', {id}, function () {
+		$('#' + id).hide();
+	});
+}

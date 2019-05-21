@@ -46,7 +46,7 @@
         <label for="accountstatus" class="question-label h4">
           Account Status
         </label>
-          <p> {{#if user.customer}}Customer {{else}} Tasker {{/if}} </p>
+          <p> {{#if user.Customer}}Customer {{else}} Tasker {{/if}} </p>
       </div>
 
       <div class="col-lg-6 col-sm-6 col-6">
@@ -192,8 +192,13 @@
                     <input type="text" class="form-control" id="newPassword" value="" name="newPassword">
                   </div>
                 </div>
-              
-              will need to confirm password to save changes
+
+                <h5 class="modal-subtitle">Confirm Password</h5>
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-9 col-12">
+                    <input type="text" class="form-control" id="confirmPassword" value="" name="confirmPassword">
+                  </div>
+                </div>
             </div>
           </div>
         </div>
@@ -265,8 +270,6 @@
                     <input type="text" class="form-control" id="addCardName" value="" name="addCardName">
                    </div>
                 </div>
-              will need to confirm password to save changes
-              and add submit button
             </div>
           </div>
         </div>

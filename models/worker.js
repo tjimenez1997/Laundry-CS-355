@@ -47,6 +47,7 @@ module.exports = (sequelize, DataTypes) => {
   };
 
   Worker.associate = function(models) {
+
   };
   return Worker;
 };

@@ -19,6 +19,12 @@ module.exports = (sequelize, DataTypes) => {
     Order.belongsTo(models.Customer);
     Order.belongsTo(models.Worker);
     Order.belongsTo(models.Status);
+    //Order.belongsTo(models.Worker, { foreignKey: 'firstname' })
+    //Order.hasOne(models.Worker, { foreignKey: 'email' })
+    //Order.belongsTo(models.Worker, {foreignKey: 'fk_workername', targetKey: 'firstname'});
+    //Order.belongsTo(models.Worker, {foreignKey: 'fk_workeremail', targetKey: 'email'});
+    
+
   };
   return Order;
 };

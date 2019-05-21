@@ -22,4 +22,48 @@ router.get('/signout', passport.authenticate('jwt', { session: false }),
 )
 
 
+router.post('/',
+	function(req, res){
+		let input = req.body;
+		let editType = input.type;
+		console.log(req.user);
+		if(editType == 'worker'){
+      		Worker.update(
+
+			   {firstname: req.body.firstname},
+			   {lastname: req.body.lastname},
+			   {phone: req.body.phone},
+			   {email: req.body.email},
+			   {address: req.body.address},
+			   {zip: req.body.zip},
+   
+   
+ 			)
+      	}
+      	else {
+
+Customer.update(
+
+			   {firstname: req.body.firstname},
+			   {lastname: req.body.lastname},
+			   {phone: req.body.phone},
+			   {email: req.body.email},
+			   {address: req.body.address},
+			   {zip: req.body.zip},
+   
+   
+ 			)
+
+
+      	}
+
+ console.log("skiped if ");
+   res.send('OK');
+
+}
+)
+
+
+
+
 module.exports = router;

@@ -517,3 +517,7 @@ label.hide {display: none;}
   -webkit-filter: drop-shadow( -2px -2px 2px #888 );
   filter: drop-shadow( -2px -2px 2px #888 );
 }
+/*-------------- account page -----------------*/
+#card-container{
+	margin-right: 10px;
+}

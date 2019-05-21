@@ -11,6 +11,7 @@ router.use('/sign-up', require('./sign-up'));
 router.use(passport.authenticate('jwt', {session: false, failureRedirect: '/'}));
 router.use(function (req, res, next) {
     res.locals.user = req.user;
+    res.locals.path = req.path;
     next();
 });
 router.use('/schedule', require('./schedule'));

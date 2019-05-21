@@ -27,7 +27,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 // View Engine
 const exphbs = require('express-handlebars');
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs({
+    defaultLayout: 'main', helpers: {
+        ifEquals: function (arg1, arg2, options) {
+            return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+        }
+    }
+}));
 app.set('view engine', 'handlebars');
 
 // Load up all of the controllers
@@ -39,7 +45,8 @@ app.use(controllers);
 // then, start up the server and start listening.
 models.sequelize.sync({force: false})
     .then(() => {
-        const noop = ()=>{};
+        const noop = () => {
+        };
         models.Status.create({
             name: 'New'
         }).catch(noop);

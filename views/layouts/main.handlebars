@@ -1,27 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Laundry Project</title>
+    <title>Laundry Project</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
-	<link href="/vendor/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="/vendor/css/jquery-ui/jquery-ui.min.css">
-	<link rel="stylesheet" type="text/css" href="/vendor/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
-	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/vendor/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/vendor/css/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/responsive.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg fixed-top" id="home-navbar">
+        <a class="navbar-brand" href="#">
+            <img class="img-fluid" src="img/logo_expresslaundry_navbar.png" alt="ExpressBrand">
+        </a>
+        <a class="navbar-brand">Express Laundry</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                 <li class="nav-item">
+                    <a class="nav-link{{#ifEquals path '/find-work'}} active{{/ifEquals}}" href="/find-work">Find Work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link{{#ifEquals path '/schedule'}} active{{/ifEquals}}" href="/schedule">Schedule a Pick Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link{{#ifEquals path '/order-history'}} active{{/ifEquals}}" href="/order-history">Order History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link{{#ifEquals path '/account'}} active{{/ifEquals}}" href="/account">Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/signout">Sign Out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-	{{{body}}}
+    {{{body}}}
 
-	<script type="text/javascript" src="/vendor/js/jquery.min.js"></script>
-	<script type="text/javascript" src="/vendor/js/popper.min.js"></script>
-	<script type="text/javascript" src="/vendor/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="/vendor/js/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="/vendor/js/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="/vendor/js/jquery.star-rating-svg.min.js"></script>
-	<script type="text/javascript" src="/js/main.js"></script>
-	<script type="text/javascript" src="/js/jwt-decode.min.js"></script>
-	<script type="text/javascript" src="/js/warningMessage.js"></script>
+    <script type="text/javascript" src="/vendor/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/vendor/js/popper.min.js"></script>
+    <script type="text/javascript" src="/vendor/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/vendor/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="/vendor/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/vendor/js/jquery.star-rating-svg.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/jwt-decode.min.js"></script>
+    <script type="text/javascript" src="/js/warningMessage.js"></script>
 </body>
 </html>

@@ -61,7 +61,7 @@ router.post('/', (req, res) => {
                   //console.log("Password: "+req.body.userPassword + "Matched Password: "+isMatch);
                   let pk = 'MIIBOAIBAAJAVPfYwkIYRZ6CUtRQFefcPD9p9GXn8e/capeB6RWkZtE0HTJpAms/Fa6TC8sUIYfC+hlD5Le1ORiL9VPKtydk0wIDAQABAkBU8OB0cnapQmiuPSlCfOOiJxLZC/bv2gXTWVq5lLUhQuOIXEqeQcxcTdNru0ki9C/tRmhcnaT5hlbr/7WDM2EhAiEAl0u3dpB+Y+QK8jp7iGlFPYA2COV0v9n8twfdv2ufBEUCIQCPxTYqF7lkjkStrMH7ysak6uG5PhnckgB+WFvDuwgyNwIgFjONM3/WnC/tj0gXspfIClNTGpEZRcHmPLGRz7IqPoUCIDvIkgFm5BzAXCasE+4UIA4r7bkN7csemz3umBoICBx5AiBzB9RHgQCGx4C4S3eaGI6dmor/A1j/Q4fsHkPs3KSCHQ==';
                   if(isMatch && !err) {
-                        var token = jwt.sign(JSON.parse(JSON.stringify({firstname:customer.firstname, lastname:customer.lastname, email:customer.email, phone:customer.phone, address: customer.address})), pk, {expiresIn: 86400 * 30});
+                        var token = jwt.sign(JSON.parse(JSON.stringify({firstname:customer.firstname, lastname:customer.lastname, email:customer.email, phone:customer.phone, address: customer.address, Customer: true})), pk, {expiresIn: 86400 * 30});
                     
                         //Store jwt with client side cookie
                         //Redirect to debug for now (should be changed to first customer route later)
@@ -88,7 +88,7 @@ router.post('/', (req, res) => {
               workers.comparePassword(req.body.userPassword, (err, isMatch) => {
                   let pk = 'MIIBOAIBAAJAVPfYwkIYRZ6CUtRQFefcPD9p9GXn8e/capeB6RWkZtE0HTJpAms/Fa6TC8sUIYfC+hlD5Le1ORiL9VPKtydk0wIDAQABAkBU8OB0cnapQmiuPSlCfOOiJxLZC/bv2gXTWVq5lLUhQuOIXEqeQcxcTdNru0ki9C/tRmhcnaT5hlbr/7WDM2EhAiEAl0u3dpB+Y+QK8jp7iGlFPYA2COV0v9n8twfdv2ufBEUCIQCPxTYqF7lkjkStrMH7ysak6uG5PhnckgB+WFvDuwgyNwIgFjONM3/WnC/tj0gXspfIClNTGpEZRcHmPLGRz7IqPoUCIDvIkgFm5BzAXCasE+4UIA4r7bkN7csemz3umBoICBx5AiBzB9RHgQCGx4C4S3eaGI6dmor/A1j/Q4fsHkPs3KSCHQ==';
                   if(isMatch && !err) {
-                        var token = jwt.sign(JSON.parse(JSON.stringify({firstname:workers.firstname, lastname:workers.lastname, email:workers.email, phone:workers.phone, address: workers.address})), pk, {expiresIn: 86400 * 30});
+                        var token = jwt.sign(JSON.parse(JSON.stringify({firstname:workers.firstname, lastname:workers.lastname, email:workers.email, phone:workers.phone, address: workers.address, Worker: true})), pk, {expiresIn: 86400 * 30});
                     
                         //Store jwt with client side cookie
                         //Redirect to debug for now (should be changed to first customer route later)

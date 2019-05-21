@@ -32,102 +32,32 @@
 <section id="all-tasks-section">
   <div class="container">
     <h1 class="section-title work-section-title">Find Work</h1>
-    <div class="row entry-row">
-      <div class="col-lg-3 col-sm-6 col-6">
-        <span class="col-title">Brenda Walker</span>
-        <p>770 Michigan Avenue, Gibsonia, PA 15044</p>
-      </div>
-      <div class="col-lg-3 col-sm-6 col-6">
-        <span class="col-title">Services</span>
-        <span>Wash & Dry, Dry Clean</span>
-      </div>
-      <div class="col-lg-2 col-sm-6 col-6">
-        <span class="col-title">Pickup</span>
-        <span>3:00 PM, 5/5/2019</span>
-      </div>
-      <div class="col-lg-2 col-sm-6 col-6">
-        <span class="col-title">Rating</span>
-        <div class="myRating-1"></div>
-      </div>
-      <div class="col-lg-2 col-sm-12 col-12">
-        <div class="d-flex flex-lg-column flex-row justify-content-lg-around justify-content-start align-items-end pending-actions">
-          <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
-          <a class="theme-btn accept-btn">Accept</a>
-        </div>
-      </div>
-    </div>
-    <div class="row entry-row">
-      <div class="col-lg-3 col-sm-6 col-6">
-        <span class="col-title">Brenda Walker</span>
-        <p>770 Michigan Avenue, Gibsonia, PA 15044</p>
-      </div>
-      <div class="col-lg-3 col-sm-6 col-6">
-        <span class="col-title">Services</span>
-        <span>Wash & Dry</span>
-      </div>
-      <div class="col-lg-2 col-sm-6 col-6">
-        <span class="col-title">Pickup</span>
-        <span>3:00 PM, 5/5/2019</span>
-      </div>
-      <div class="col-lg-2 col-sm-6 col-6">
-        <span class="col-title">Rating</span>
-        <div class="myRating-1"></div>
-      </div>
-      <div class="col-lg-2 col-sm-12 col-12">
-        <div class="d-flex flex-lg-column flex-row justify-content-lg-around justify-content-start align-items-end pending-actions">
-          <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
-          <a class="theme-btn accept-btn">Accept</a>
-        </div>
-      </div>
-    </div>
-    <div class="row entry-row">
-      <div class="col-lg-3 col-sm-6 col-6">
-        <span class="col-title">Brenda Walker</span>
-        <p>770 Michigan Avenue, Gibsonia, PA 15044</p>
-      </div>
-      <div class="col-lg-3 col-sm-6 col-6">
-        <span class="col-title">Services</span>
-        <span>Wash & Dry, Dry Clean</span>
-      </div>
-      <div class="col-lg-2 col-sm-6 col-6">
-        <span class="col-title">Pickup</span>
-        <span>3:00 PM, 5/5/2019</span>
-      </div>
-      <div class="col-lg-2 col-sm-6 col-6">
-        <span class="col-title">Rating</span>
-        <div class="myRating-1"></div>
-      </div>
-      <div class="col-lg-2 col-sm-12 col-12">
-        <div class="d-flex flex-lg-column flex-row justify-content-lg-around justify-content-start align-items-end pending-actions">
-          <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
-          <a class="theme-btn accept-btn">Accept</a>
-        </div>
-      </div>
-    </div>
-    <div class="row entry-row">
-      <div class="col-lg-3 col-sm-6 col-6">
-        <span class="col-title">Brenda Walker</span>
-        <p>770 Michigan Avenue, Gibsonia, PA 15044</p>
-      </div>
-      <div class="col-lg-3 col-sm-6 col-6">
-        <span class="col-title">Services</span>
-        <span>Wash & Dry, Dry Clean</span>
-      </div>
-      <div class="col-lg-2 col-sm-6 col-6">
-        <span class="col-title">Pickup</span>
-        <span>3:00 PM, 5/5/2019</span>
-      </div>
-      <div class="col-lg-2 col-sm-6 col-6">
-        <span class="col-title">Rating</span>
-        <div class="myRating-1"></div>
-      </div>
-      <div class="col-lg-2 col-sm-12 col-12">
-        <div class="d-flex flex-lg-column flex-row justify-content-lg-around justify-content-start align-items-end pending-actions">
-          <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
-          <a class="theme-btn accept-btn">Accept</a>
-        </div>
-      </div>
-    </div>
+      {{#each orders}}
+          <div class="row entry-row">
+              <div class="col-lg-3 col-sm-6 col-6">
+                  <span class="col-title">{{this.Customer.firstname}} {{this.Customer.lastname}}</span>
+                  <p>{{this.address}}</p>
+              </div>
+              <div class="col-lg-3 col-sm-6 col-6">
+                  <span class="col-title">Services</span>
+                  <span>{{this.serviceText}}</span>
+              </div>
+              <div class="col-lg-2 col-sm-6 col-6">
+                  <span class="col-title">Pickup</span>
+                  <span>{{this.pickuptime}}</span>
+              </div>
+              <div class="col-lg-2 col-sm-6 col-6">
+                  <span class="col-title">Rating</span>
+                  <div class="myRating-1"></div>
+              </div>
+              <div class="col-lg-2 col-sm-12 col-12">
+                  <div class="d-flex flex-lg-column flex-row justify-content-lg-around justify-content-start align-items-end pending-actions">
+                      <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
+                      <a class="theme-btn accept-btn">Accept</a>
+                  </div>
+              </div>
+          </div>
+      {{/each}}
 
     <div class="modal fade order-modal" tabindex="-1" role="dialog" aria-labelledby="orderDetails" aria-hidden="true">
       <div class="modal-dialog modal-lg">

@@ -38,7 +38,7 @@ router.post('/', (req, res) => {
               //Store jwt with client side cookie
               //Redirect to debug for now (should be changed to first customer route later)
               res.cookie('authToken',token);
-              res.redirect('schedule');
+              res.redirect('find-work');
             });
         } else {
           let errorCode = 2;
@@ -64,7 +64,7 @@ router.post('/', (req, res) => {
               //Store jwt with client side cookie
               //Redirect to debug for now (should be changed to first customer route later)
               res.cookie('authToken',token);
-              res.redirect('schedule');
+              res.redirect('order-history');
             });
         } else {
           let errorCode = 3;

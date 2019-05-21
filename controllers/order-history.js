@@ -6,12 +6,41 @@ require('../config/passport.js')(passport);
 const router = express.Router();
 
 //Authentication Protected Order Page
-router.get('/', passport.authenticate('jwt', { session: false }),
-    //Everything in this function only occurs if user token is valid
-    function(req, res) {
-	    res.render('order-history');
-   	}
-);
+router.get('/', function(req, res) {
+	models.Order.findAll({
+		where: {
+			CustomerEmail: req.user.email
+		},
+		include: [models.Customer, models.Worker]
+	}).then((orders) => {
+		const arrs = {
+			New: [],
+			'InProgress': [],
+			'Done': []
+		};
+
+		orders.forEach(function (o) {
+			var order = o.toJSON();
+			order.pickuptime = order.pickuptime.toLocaleString();
+
+			if (order.washdry) {
+				order.serviceText = 'Wash & Dry';
+			}
+
+			if (order.dryclean) {
+				if (order.serviceText) {
+					order.serviceText += ', Dry Clean';
+				} else {
+					order.serviceText = 'Dry Clean';
+				}
+			}
+
+			arrs[order.StatusName.replace(' ', '')].push(order);
+		});
+
+		res.render('order-history', arrs);
+	});
+});
     
 
 

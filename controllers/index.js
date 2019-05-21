@@ -21,7 +21,6 @@ router.use('/schedule', require('./schedule'));
 router.use('/thank-you', require('./thank-you'));
 router.use('/all-tasks', require('./all-tasks'));
 router.use('/account', require('./account'));
-router.use('/choose', require('./choose'));
 router.use('/find-work', require('./find-work'));
 router.use('/order-history', require('./order-history'));
 

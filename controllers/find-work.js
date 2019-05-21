@@ -4,7 +4,13 @@ const models = require('../models');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.render('find-work');
+    models.Order.findAll({
+        where: {
+            worker: null
+        }
+    }).then((err, orders) => {
+        res.render('find-work', {orders});
+    });
 });
   
   

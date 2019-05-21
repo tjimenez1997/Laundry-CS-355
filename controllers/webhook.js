@@ -21,9 +21,37 @@ var SKUS = {
         type: 'Wash & Dry',
         size: 'Large'
     },
-    sku_F52Egq34K8LKw: {
+    sku_F6r6kYmM66fnhk: {
+        type: 'Dry Clean',
+        item: 'Skirt'
+    },
+    sku_F6r6SVjWR9Dr35: {
+        type: 'Dry Clean',
+        item: 'Pants'
+    },
+    sku_F6r6rP7Fycqvyg: {
+        type: 'Dry Clean',
+        item: 'Blanket'
+    },
+    sku_F6r4paBJiphP50: {
+        type: 'Dry Clean',
+        item: 'Dress'
+    },
+    sku_F6r38v1i64Foe6: {
+        type: 'Dry Clean',
+        item: 'Suit'
+    },
+    sku_F6r30XhPECezYL: {
+        type: 'Dry Clean',
+        item: 'Coat'
+    },
+    sku_F6r3ThfDzQc0DJ: {
         type: 'Dry Clean',
         item: 'Sweater'
+    },
+    sku_F51VTXGCfrWj7c: {
+        type: 'Dry Clean',
+        item: 'Jacket'
     }
 };
 

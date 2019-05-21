@@ -67,7 +67,7 @@ router.post('/', (req, res) => {
                         //Redirect to debug for now (should be changed to first customer route later)
                         res.cookie('authToken',token);
                         //res.redirect('/debug');
-                        res.redirect('schedule');
+                        res.redirect('/schedule');
                   } else {
                      let errorCode = 1;
                      res.cookie('warningMessage',errorCode, {maxAge: 3000});
@@ -93,7 +93,7 @@ router.post('/', (req, res) => {
                         //Store jwt with client side cookie
                         //Redirect to debug for now (should be changed to first customer route later)
                         res.cookie('authToken',token);
-                        res.redirect('schedule');
+                        res.redirect('/find-work');
                   } else {
                     //res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
                      let errorCode = 1;

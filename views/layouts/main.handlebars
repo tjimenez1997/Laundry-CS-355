@@ -23,7 +23,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                     <li class="nav-item">
+                    <li class="nav-item">
+                        <a class="nav-link{{#ifEquals path '/all-tasks'}} active{{/ifEquals}}" href="/all-tasks">All Tasks</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link{{#ifEquals path '/find-work'}} active{{/ifEquals}}" href="/find-work">Find Work</a>
                     </li>
                     <li class="nav-item">
